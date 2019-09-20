@@ -14,11 +14,11 @@ body {
 
 .row{
 	width: 100%;
+	flex-direction: row;
 }
 
 .center{
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
