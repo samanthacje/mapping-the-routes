@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	loadHeaderVideo(isDesktopPrev)
 	
 	var audioCtrl = ProgressBar.ctrlHeaderAudio()
-	ProgressBar.initScrollController()
+	var progressCtrl = ProgressBar.initScrollController()
 	ProgressBar.initClickNav()
 
 	Hash.initHashController()
@@ -43,6 +43,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	  //reset audio ctrl
 	  audioCtrl.destroy(true)
 	  audioCtrl = ProgressBar.ctrlHeaderAudio()
+	  //reset scroll bar progress
+	  progressCtrl.destroy(true)
+	  progressCtrl =  ProgressBar.initScrollController()
 	}	
 });
 

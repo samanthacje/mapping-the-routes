@@ -40,6 +40,8 @@ ProgressBar.initScrollController = ()=>{
   var scene = new ScrollMagic.Scene({triggerElement: $body, triggerHook: 'onLeave', duration: bodyHeight, tweenChanges: true})
           .setTween(tween)
           .addTo(controller)
+
+  return controller
 }
 
 ProgressBar.initClickNav = ()=>{
