@@ -19,7 +19,7 @@ RoutesCtrl.init = (isDesktop) => {
 	}
   if (isDesktop){
     //return all controllers
-    return [Malaysia.MapCtrl1(), Malaysia.MapCtrl2(), Nepal.MapCtrl()]
+    return [Malaysia.MapCtrl1(), Malaysia.MapCtrl2(), Nepal.MapCtrl(), Cameroon.MapCtrl1()]
   } else {
     return [Malaysia.MapCtrlM1(), Malaysia.MapCtrlM2(), Malaysia.MapCtrlM3(), Indonesia.MapCtrlM1(), Nepal.MapCtrlM()]
   }
