@@ -102,6 +102,9 @@
 	top: 0;
 }
 
+/*specific cases*/
+
+
 /* Desktop */
 @media only screen and (min-device-width: 480px) {
 	.routes-map-container{
@@ -169,5 +172,9 @@
 
 	.scrollmagic-pin-spacer{
 		margin: 0 !important;
+	}
+
+	#indonesia-text-mobile{
+		display: none;		
 	}
 }

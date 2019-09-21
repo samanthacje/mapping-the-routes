@@ -38,4 +38,19 @@ Indonesia.MapCtrl1 = () => {
   })
 }
 
+Indonesia.MapCtrlM1 = () => {
+	var map = $('#indonesia-routes-m-1')
+  var controller = new ScrollMagic.Controller();
+  var navOffset = ($('.nav').offsetHeight + $('#progress-div').offsetHeight) || 0
+
+  var pin_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: '100%', offset: (-navOffset), reverse: true})
+    .on('start', function(){
+      this.setPin(this.triggerElement(), {pushFollowers: false})
+    })
+    .addTo(controller)
+
+  return controller
+}
+
+
 export default Indonesia

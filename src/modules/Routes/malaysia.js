@@ -40,7 +40,7 @@ Malaysia.MapCtrl1 = () => {
   var navOffset = ($('.nav').offsetHeight + $('#progress-div').offsetHeight) || 0
 
   var pin_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: '300%', offset: (-navOffset), reverse: true})
-    .on('enter', function(){
+    .on('start', function(){
       this.setPin(this.triggerElement(), {pushFollowers: false})
     })
     .addTo(controller)
@@ -112,7 +112,7 @@ Malaysia.MapCtrl2 = () => {
   var navOffset = ($('.nav').offsetHeight + $('#progress-div').offsetHeight) || 0
 
   var pin_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: '400%', offset: (-navOffset), reverse: true})
-    .on('enter', function(){
+    .on('start', function(){
       this.setPin(this.triggerElement(), {pushFollowers: false})
     })
     .addTo(controller)
@@ -210,7 +210,7 @@ Malaysia.MapCtrlM1 = () => {
   var navOffset = ($('.nav').offsetHeight + $('#progress-div').offsetHeight) || 0
 
   var pin_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: '300%', offset: (-navOffset), reverse: true})
-    .on('enter', function(){
+    .on('start', function(){
       this.setPin(this.triggerElement(), {pushFollowers: false})
     })
     .addTo(controller)
@@ -236,7 +236,7 @@ Malaysia.MapCtrlM2 = () => {
   var navOffset = ($('.nav').offsetHeight + $('#progress-div').offsetHeight) || 0
 
   var pin_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: '400%', offset: (-navOffset), reverse: true})
-    .on('enter', function(){
+    .on('start', function(){
       this.setPin(this.triggerElement(), {pushFollowers: false})
     })
     .addTo(controller)
@@ -266,7 +266,7 @@ Malaysia.MapCtrlM3 = () => {
   var navOffset = ($('.nav').offsetHeight + $('#progress-div').offsetHeight) || 0
 
   var pin_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: '100%', offset: (-navOffset), reverse: true})
-    .on('enter', function(){
+    .on('start', function(){
       this.setPin(this.triggerElement(), {pushFollowers: false})
     })
     .addTo(controller)
