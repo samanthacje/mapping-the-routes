@@ -174,7 +174,7 @@
 		margin: 0 !important;
 	}
 
-	#indonesia-text-mobile{
+	#indonesia-text-mobile, #nepal-text-mobile{
 		display: none;		
 	}
 }
