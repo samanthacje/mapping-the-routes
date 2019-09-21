@@ -33,7 +33,7 @@ var path = d3.geoPath().projection(projection);
 var title = svg.append("text")
 	    .attr("class", "vis-title")
 	    .attr("transform", "translate(" + 650 + "," + 140 + ")")
-      .text('pangolin trafficked')
+      .text('pangolins trafficked')
 
 var range = title.append('tspan').attr('x', 0).attr('dy', '1.3em')
 	    .text("(select a time range)");

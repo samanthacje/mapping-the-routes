@@ -534,6 +534,35 @@
     <p>In Sumatra, Java and Kalimantan, pangolins provide an essential balance to the ecosystem, feeding on pests which affect plants such as the oil palm. However, syndicates in these areas “hunt on a massive scale during the transition from rainy season to dry season,” Sustyo Iriyono, the official at the Environment and Forestry Ministry in charge of fighting the illicit pangolin trade, said in an interview. </p>
 
     <!-- Indonesia Map 1 -->
+    <div class="routes-map-container mobile-hidden" id="indonesia-routes-1">
+      <img class="routes-map-bg" src="assets/maps/Indonesia/desktop/map-01.jpg">
+
+      <svg class="routes-map-svg" viewbox="0 0 1466 1080">
+          <use xlink:href="#indonesia-arrows" />
+          <use xlink:href="#indonesia-marker-1" />
+          <use xlink:href="#indonesia-marker-2" />
+          <use xlink:href="#indonesia-marker-3" />
+          <use xlink:href="#indonesia-marker-4" />
+          <use xlink:href="#indonesia-marker-5" />
+          <use xlink:href="#indonesia-marker-6" />
+
+          <use xlink:href="#indonesia-caption-1" />
+          <use xlink:href="#indonesia-caption-2" />
+          <use xlink:href="#indonesia-caption-3" />
+          <use xlink:href="#indonesia-caption-4" />
+          <use xlink:href="#indonesia-caption-5" />
+          <use xlink:href="#indonesia-caption-6" />
+      </svg>
+
+      <div class="routes-map-para-static">
+        <p>The Malacca Straits has become a hotspot for pangolin smuggling heading to Malaysia. An analysis of cases reported in the media reveals a consistent modus operandi: transporting live pangolins across the Straits on smaller vessels.</p>
+        <h2>TAP ON MARKERS TO SEE CASE DETAILS</h2>
+      </div>
+    </div>
+
+    <div class="routes-map-container-m desktop-hidden" id="indonesia-routes-m-1">
+      <img class="routes-map-bg-m" src="assets/maps/Indonesia/mobile/m-map-01.jpg">
+    </div>
 
     <p>Here, investigators typically aim for the poachers and then try to work their way up the syndicate through vendors and middlemen. Rarely do they get very far. </p>
 
@@ -1087,7 +1116,101 @@
 <!-- Indonesia map svg elements -->
 <svg style="display: none;" viewbox="0 0 1466 1080">
   <defs>
-    
+    <style>
+      .indo-cls-1{fill:#fc7a00;}
+      .indo-cls-2{fill:#fc7a00;opacity:0.2;}
+      .indo-cls-3,.indo-cls-5,.indo-cls-7{fill:#fff;}
+      .indo-cls-3{stroke:#fc7a00;stroke-linejoin:round;stroke-width:4px;}
+      .indo-cls-4{fill:#3b3b3b;}
+      .indo-cls-5{font-size:20px;font-family:OpenSans-ExtraBold, Open Sans;font-weight:800;}
+      .indo-cls-7{font-size:15px;font-family:OpenSans, Open Sans;}
+
+      #indonesia-caption-1 , #indonesia-caption-2 , #indonesia-caption-3 , #indonesia-caption-4 , #indonesia-caption-5 , #indonesia-caption-6{
+        opacity: 0;
+      }
+
+      .indonesia-marker:hover{
+        cursor: pointer;
+      }
+    </style>
+    <g id="indonesia-arrows">
+      <g id="arrows-2"><rect class="indo-cls-1" x="622.48" y="164.61" width="3.06" height="4.6" transform="translate(55.29 473.18) rotate(-43.28)"/><path class="indo-cls-1" d="M630.06,164.38,626.92,161l4.48-4.2,3.14,3.35ZM637.9,157l-3.15-3.35,4.48-4.21,3.15,3.35Zm7.83-7.36-3.14-3.35,4.48-4.2,3.14,3.35Zm7.84-7.35L650.42,139l4.48-4.2,3.15,3.35ZM661.4,135l-3.14-3.36,4.48-4.2,3.14,3.35Zm7.84-7.36-3.15-3.35,4.48-4.2,3.15,3.35Zm7.83-7.35-3.14-3.35,4.48-4.21,3.14,3.35Zm7.84-7.36-3.15-3.35,4.48-4.2,3.15,3.35Z"/><rect class="indo-cls-1" x="690.75" y="100.53" width="3.07" height="4.6" transform="translate(117.08 501.53) rotate(-43.18)"/><polygon class="indo-cls-1" points="694.68 108.93 686.15 100.13 699.76 95.47 694.68 108.93"/></g>
+      <g id="arrows-3"><rect class="indo-cls-1" x="709.54" y="251.67" width="3.07" height="4.6" transform="translate(18.76 555.35) rotate(-43.18)"/><path class="indo-cls-1" d="M717.12,251.44,714,248.09l4.48-4.2,3.14,3.35Zm7.84-7.35-3.15-3.35,4.48-4.21,3.15,3.36Zm7.83-7.36-3.14-3.35,4.48-4.2,3.14,3.35Zm7.84-7.35L737.48,226l4.48-4.2,3.15,3.35Zm7.83-7.35-3.14-3.35,4.48-4.21,3.14,3.35Zm7.84-7.36-3.15-3.35,4.48-4.2,3.15,3.35Zm7.83-7.35L761,204l4.48-4.21,3.14,3.35ZM772,200l-3.15-3.35,4.48-4.2,3.15,3.35Z"/><rect class="indo-cls-1" x="777.81" y="187.59" width="3.07" height="4.6" transform="translate(81.08 584.68) rotate(-43.18)"/><polygon class="indo-cls-1" points="781.74 195.99 773.21 187.19 786.82 182.53 781.74 195.99"/></g>
+      <g id="arrows-4"><rect class="indo-cls-1" x="796.6" y="338.73" width="3.06" height="4.6" transform="translate(-17.78 637) rotate(-43.07)"/><path class="indo-cls-1" d="M804.18,338.5,801,335.15l4.48-4.21,3.15,3.36Zm7.83-7.35-3.14-3.36,4.48-4.2,3.14,3.35Zm7.84-7.36-3.15-3.35,4.48-4.2,3.15,3.35Zm7.83-7.35-3.14-3.35,4.48-4.21,3.14,3.35Zm7.84-7.36-3.14-3.35,4.47-4.2,3.15,3.35Zm7.84-7.35-3.15-3.35,4.48-4.21,3.14,3.35Zm7.83-7.36L848.05,291l4.47-4.2,3.15,3.35ZM859,287l-3.15-3.35,4.48-4.2,3.14,3.35Z"/><rect class="indo-cls-1" x="864.88" y="274.65" width="3.06" height="4.6" transform="translate(45.06 667.77) rotate(-43.17)"/><polygon class="indo-cls-1" points="868.8 283.05 860.26 274.26 873.88 269.59 868.8 283.05"/></g>
+      <g id="arrows-5"><rect class="indo-cls-1" x="883.66" y="425.79" width="3.07" height="4.6" transform="translate(-53.23 721.65) rotate(-43.18)"/><path class="indo-cls-1" d="M891.24,425.56l-3.14-3.35,4.48-4.2,3.14,3.35Zm7.84-7.35-3.15-3.35,4.48-4.21,3.15,3.35Zm7.83-7.36-3.14-3.35,4.48-4.2,3.14,3.35Zm7.84-7.35-3.15-3.35,4.48-4.21,3.15,3.36Zm7.83-7.36-3.14-3.35,4.48-4.2,3.14,3.35Zm7.84-7.35-3.15-3.35,4.48-4.2,3.15,3.35Zm7.83-7.35-3.14-3.35,4.48-4.21,3.14,3.35Zm7.84-7.36-3.15-3.35,4.48-4.2,3.15,3.35Z"/><rect class="indo-cls-1" x="951.93" y="361.71" width="3.07" height="4.6" transform="translate(9.08 750.96) rotate(-43.18)"/><polygon class="indo-cls-1" points="955.86 370.11 947.33 361.31 960.95 356.65 955.86 370.11"/></g>
+      <g id="arrows-6"><rect class="indo-cls-1" x="970.72" y="512.85" width="3.06" height="4.6" transform="translate(-88.73 806.63) rotate(-43.28)"/><path class="indo-cls-1" d="M978.3,512.62l-3.14-3.35,4.48-4.2,3.14,3.35Zm7.84-7.35L983,501.92l4.48-4.21,3.15,3.36Zm7.83-7.35-3.14-3.36,4.48-4.2,3.14,3.35Zm7.84-7.36-3.15-3.35,4.48-4.2,3.15,3.35Zm7.83-7.35-3.14-3.35,4.48-4.21,3.14,3.35Zm7.84-7.36-3.15-3.35,4.48-4.2,3.15,3.35Zm7.83-7.35-3.14-3.35,4.48-4.21,3.14,3.35Zm7.84-7.36-3.14-3.35,4.47-4.2,3.15,3.35Z"/><rect class="indo-cls-1" x="1038.99" y="448.77" width="3.07" height="4.6" transform="translate(-26.92 834.1) rotate(-43.18)"/><polygon class="indo-cls-1" points="1042.92 457.17 1034.39 448.37 1048 443.71 1042.92 457.17"/></g>
+    </g>
+
+    <g id="indonesia-marker-6" class="indonesia-marker">
+      <circle class="indo-cls-2" cx="1313" cy="788" r="40"/>
+      <circle class="indo-cls-3" cx="1313" cy="788" r="8.66"/>
+    </g>
+    <g id="indonesia-marker-5" class="indonesia-marker">
+      <circle class="indo-cls-2" cx="1112" cy="719" r="40"/>
+      <circle class="indo-cls-3" cx="1112" cy="719" r="8.66"/>
+    </g>
+    <g id="indonesia-marker-4" class="indonesia-marker">
+      <circle class="indo-cls-2" cx="646" cy="344" r="40"/>
+      <circle class="indo-cls-3" cx="646" cy="344" r="8.66"/>
+    </g>
+    <g id="indonesia-marker-3" class="indonesia-marker">
+      <circle class="indo-cls-2" cx="765" cy="444" r="40"/>
+      <circle class="indo-cls-3" cx="765" cy="444" r="8.66"/>
+    </g>
+    <g id="indonesia-marker-2" class="indonesia-marker">
+      <circle class="indo-cls-2" cx="511" cy="291" r="40"/>
+      <circle class="indo-cls-3" cx="511" cy="291" r="8.66"/>
+    </g>
+    <g id="indonesia-marker-1" class="indonesia-marker">
+      <circle class="indo-cls-2" cx="481" cy="222" r="40"/>
+      <circle class="indo-cls-3" cx="481" cy="222" r="8.66"/>
+    </g>
+    <g id="indonesia-caption-1">
+      <g id="indonesia-caption-1-1">
+        <polygon class="indo-cls-4" points="493.43 269 480.51 251 467.6 269 101.02 269 101.02 418 595 418 595 269 493.43 269"/>
+        <text class="indo-cls-5" transform="translate(128 310.31)">128 pangolins seized - Feb 2013</text>
+        <g class="indo-cls-6">
+          <text class="indo-cls-7" transform="translate(127.51 337.06)">Belawan Customs and Excise Office (KPPBC) marine patrol team </text>
+          <text class="indo-cls-7" transform="translate(127.51 362.06)">seized 128 pangolins as they were being smuggled out towards </text>
+          <text class="indo-cls-7" transform="translate(127.51 387.06)">Malaysia, via the Melaka Straits.</text>
+        </g>
+      </g>
+      <g id="indonesia-caption-1-2">
+        <rect class="indo-cls-4" x="101.01" y="428" width="493.99" height="149"/>
+        <text class="indo-cls-5" transform="translate(128 469.31)">102 pangolins seized - Nov 2015</text>
+        <g class="indo-cls-6">
+          <text class="indo-cls-7" transform="translate(127.51 496.06)">102 pangolins were seized here, as smugglers were about to </text>
+          <text class="indo-cls-7" transform="translate(127.51 521.06)">transport them to Malaysia via the Melaka Straits. Nine of the </text>
+          <text class="indo-cls-7" transform="translate(127.51 546.06)">pangolins had died.</text>
+        </g>
+      </g>
+    </g>
+    <g id="indonesia-caption-2">
+      <rect class="indo-cls-4" x="130.01" y="350" width="531" height="175"/>
+      <polygon class="indo-cls-4" points="526.01 355 493.01 355 509.51 332 526.01 355"/>
+      <text class="indo-cls-5" transform="translate(157 391.31)">Over one ton of pangolins seized - June 2017</text>
+      <g class="indo-cls-6">
+        <text class="indo-cls-7" transform="translate(156.51 418.06)">Over a ton of live pangolins, pangolin parts and scales were seized </text><text class="indo-cls-7" transform="translate(156.51 443.06)">at a warehouse here. The stash included around 225 individual </text><text class="indo-cls-7" transform="translate(156.51 468.06)">pangolins, five large sacks of wet pangolins, and four large sacks of </text><text class="indo-cls-7" transform="translate(156.51 493.06)">dried pangolin skin.</text>
+      </g>
+    </g>
+    <g id="indonesia-caption-3">
+      <polygon class="indo-cls-4" points="656.43 393 643.51 375 630.6 393 264.01 393 264.01 568 746 568 746 393 656.43 393"/><text class="indo-cls-5" transform="translate(291 434.31)">102 pangolins seized - 2013</text><g class="indo-cls-6"><text class="indo-cls-7" transform="translate(290.51 461.06)">102 live pangolins seized at the Port of Batubara Regency, </text><text class="indo-cls-7" transform="translate(290.51 486.06)">onboard a ship. The ship&apos;s captain and four crewmembers </text><text class="indo-cls-7" transform="translate(290.51 511.06)">were arrested. The captain admitted that he was instructed to </text><text class="indo-cls-7" transform="translate(290.51 536.06)">transport the pangolins to Malaysia.</text>
+      </g>
+    </g>
+    <g id="indonesia-caption-4">
+      <polygon class="indo-cls-4" points="778.43 498 765.51 480 752.6 498 386.01 498 386.01 624 913 624 913 498 778.43 498"/><text class="indo-cls-5" transform="translate(413 539.31)">May 2014</text>
+      <g class="indo-cls-6"><text class="indo-cls-7" transform="translate(412.51 566.06)">Two persons were arrested while attempting to smuggle four </text><text class="indo-cls-7" transform="translate(412.51 591.06)">pangolins to Malaysia by ship, from the Tanjung Balai-Karimun Port.</text></g>
+    </g>
+    <g id="indonesia-caption-5">
+      <polygon class="indo-cls-4" points="1193 532 729.02 532 729.02 658 1095.6 658 1108.52 676 1121.43 658 1193 658 1193 532"/><text class="indo-cls-5" transform="translate(756 573.31)">101 pangolins seized - 24 Oct 2017</text>
+      <g class="indo-cls-6"><text class="indo-cls-7" transform="translate(755.51 600.06)">101 pangolins seized by navy personnel as they were being </text><text class="indo-cls-7" transform="translate(755.51 625.06)">smuggled to Malaysia via boat.</text>
+      </g>
+    </g>
+    <g id="indonesia-caption-6">
+      <polygon class="indo-cls-4" points="1391 507 869.02 507 869.02 682 1391 682 1391 507"/><text class="indo-cls-5" transform="translate(896 548.31)">89 pangolins seized - Unspecified date</text>
+      <g class="indo-cls-6"><text class="indo-cls-7" transform="translate(895.51 575.06)">Police thwarted a plan to smuggle 89 pangolins to Malaysia. Four </text><text class="indo-cls-7" transform="translate(895.51 600.06)">people from South Sumatra were named as suspects. The pangolins </text><text class="indo-cls-7" transform="translate(895.51 625.06)">were transported by land with two cars to a small port on Bengkalis </text><text class="indo-cls-7" transform="translate(895.51 650.06)">Island, where they were to be smuggled out to Malaysia via boat.</text></g>
+      <polygon class="indo-cls-4" points="1296.01 679 1329.01 679 1312.51 702 1296.01 679"/>
+    </g>
   <defs>
 </svg>
 <!-- END:Indonesia map svg elements -->
@@ -1162,6 +1285,12 @@
       'assets/maps/Malaysia/mobile/m-05.jpg',
       'assets/maps/Malaysia/mobile/m-06.jpg',
       'assets/maps/Malaysia/mobile/m-07.jpg',
+
+      'assets/maps/Indonesia/desktop/map-01.jpg',
+      'assets/maps/Indonesia/desktop/map-02.jpg',
+
+      'assets/maps/Indonesia/mobile/m-map-01.jpg',
+      'assets/maps/Indonesia/mobile/m-map-02.jpg',
     )
   </script>
 </div>
