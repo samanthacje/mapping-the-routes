@@ -96,4 +96,52 @@ Cameroon.MapCtrl1 = () => {
     return controller
 }
 
+Cameroon.MapCtrlM1 = () => {
+  var map = Cameroon.maps_m[0]
+
+  var controller = new ScrollMagic.Controller();
+
+  var navOffset = ($('.nav').offsetHeight + $('#progress-div').offsetHeight) || 0
+
+  var pin_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: '300%', offset: (-navOffset), reverse: true})
+    .on('start', function(){
+      this.setPin(this.triggerElement(), {pushFollowers: false})
+    })
+    .addTo(controller)
+
+  var duration_per = pin_scene.duration() / 3
+  //first scene trigger inmediately on map pin, use onLeave triggerHook
+  var second_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (duration_per-navOffset), reverse: true})
+    .on('start', (e) => { switchByDir(e, map, Cameroon.pics_m[1], Cameroon.pics_m[0]) })
+    .addTo(controller);
+
+  var thrid_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (2*duration_per-navOffset), reverse: true})
+    .on('start', (e) => { switchByDir(e, map, Cameroon.pics_m[2], Cameroon.pics_m[1]) })
+    .addTo(controller);
+
+  return controller
+}
+
+function pulseMarker(markers){
+	var inners = markers.map(item=>item.querySelector('.marker-inner'))
+	var outters = markers.map(item=>item.querySelector('.marker-outter'))
+
+	// TweenMax.fromTo(inners, 3, {attr:{r: 12.06}}, {attr:{r: 20}}).repeat(-1)//.yoyo(true)
+	TweenMax.fromTo(outters, 1, {attr:{r: 20}, opacity: 0.4}, {attr:{r: 55.68}, opacity: 0}).repeat(-1)
+}
+
+function changeBg($map, src){
+  //used only on mobile
+	$map.querySelector('.routes-map-bg-m').src = src
+}
+
+function switchByDir(e, $map, src_old, src){
+  var isForward = e.scrollDirection == 'FORWARD' ? true : false
+    if (isForward){
+      changeBg($map, src)
+    } else {
+      changeBg($map, src_old)
+    }
+}
+
 export default Cameroon
