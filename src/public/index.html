@@ -632,7 +632,6 @@
           position: absolute;
           top: 0;
           left: 0;
-          z-index: 1;
           opacity: 0;
         }
         .indonesia-caption-m p{
@@ -861,7 +860,7 @@
       <img class="routes-map-bg-m" src="assets/maps/Nepal/mobile/m-map-01.jpg">
     </div>
 
-    <div class="routes-map-para desktop-hidden">
+    <div class="routes-map-para" id="nepal-text-mobile">
       <p>Two Chinese nationals smuggled 162 kilograms of pangolins scales via commercial flights from the Democratic Republic of Congo, to Istanbul, to Kathmandu, where they were arrested. They wanted to travel to Shanghai, China.</p>
     </div>
 
@@ -920,7 +919,53 @@
 
     <p> Their statements could not be verified, nor could contact information for Li be found. </p>
 
-    <!-- map 1 hong kong -->
+    <!-- hong kong map 1 -->
+    <div class="routes-map-container mobile-hidden" id="hk-routes-1">
+      <img class="routes-map-bg" src="assets/maps/HK/desktop/map-01.jpg">
+
+      <svg class="routes-map-svg" viewbox="0 0 1466 1080">
+        <use xlink:href="#hk-ndjili-line" />
+        <use xlink:href="#hk-marker-ndjili" />
+        <use xlink:href="#hk-n_djili-text" />
+
+        <use xlink:href="#casablanca-line" />
+        <use xlink:href="#marker-casablanca" />
+        <use xlink:href="#casablanca-text" />
+
+        <use xlink:href="#hamad-line" />
+        <use xlink:href="#hamad-text" />
+        <use xlink:href="#marker-hamad" />
+
+        <use xlink:href="#HK-text" />
+        <use xlink:href="#marker-HK" />
+        <use xlink:href="#hk-line" />
+        <use xlink:href="#marker-HK" />
+        <use xlink:href="#HK-text" />
+
+        <use xlink:href="#macau-line" />
+        <use xlink:href="#marker-HK" />
+        <use xlink:href="#HK-text" />
+        <use xlink:href="#marker-macau" />
+        <use xlink:href="#macau-text" />
+      </svg>
+    </div>
+
+    <div class="routes-map-para">
+      <p>In 2018, two Chinese women were arrested while bringing 110 kilograms of pangolin scales from Kinshasa, via Morocco and Qatar, to Hong Kong. Their destination was Macau, they said.</p>
+    </div>
+
+    <div class="routes-map-para">
+      <img src="assets/maps/Malaysia/desktop/icons/handcuff.svg" class="routes-map-para-icon mobile-hidden">
+      <p>The women were arrested at the Hong Kong International Airport while attempting to travel to Macau by ferry.</p>
+    </div>
+
+    <div class="routes-map-para">
+      <p>The women had been instructed by an acquaintance in Congo to pass the scales on to a stranger in Macau, they said. Had the trip gone according to plan, those four suitcases of pangolin scales would have travelled some 17,000 kilometres on commercial routes.</p>
+    </div>
+
+    <div class="routes-map-container-m desktop-hidden" id="nepal-routes-m-1">
+      <img class="routes-map-bg-m" src="assets/maps/Nepal/mobile/m-map-01.jpg">
+    </div>
 
     <p>The two women were caught at Hong Kong airport during a routine customs X-ray check. Their suitcases contained the scales of 302 pangolins, at a total weight of 110 kilograms, wrapped in tin foil bags. Prosecutors later estimated that the scales could be worth as much as $71,000.</p>
 
@@ -1556,7 +1601,92 @@
 <!-- Hong Kong map svg elements -->
 <svg style="display: none;" viewbox="0 0 1466 1080">
   <defs>
+    <style>
+      .hk-cls-1{fill:none;stroke-width:6px;stroke-dasharray:8 6;}
+      .hk-cls-1,.hk-cls-6{stroke:#fc7a00;stroke-linejoin:round;}
+      .hk-cls-2,.hk-cls-5{fill:#fc7a00;}
+      .hk-cls-3{fill:#a36a2a;}
+      .hk-cls-4{font-size:25px;font-family:OpenSans-ExtraBold, Open Sans;font-weight:800;}
+      .hk-cls-4,.hk-cls-6{fill:#fff;}
+      .hk-cls-5{opacity:0.2;isolation:isolate;}.hk-cls-6{stroke-width:4px;}
+      #macau-line {opacity: 0.5}
+      #macau-line line {fill:none;stroke:#3b3b3b;stroke-miterlimit:10;stroke-dasharray:8 6;stroke-width:6px;}
+      #macau-line polygon {fill:#3b3b3b;}
+    </style>
+    <g id="hk-ndjili-line">
+      <path class="hk-cls-1" d="M329.5,831s-9-309-240-428"/>
+      <polygon class="hk-cls-2" points="293.31 609.94 266.43 623.42 265.39 587.82 293.31 609.94"/>
+    </g>
+    <g id="hamad-line"><path class="hk-cls-1" d="M1377.5,546s-232-147-661-59"/>
+      <polygon class="hk-cls-2" points="1009.66 473.35 1011.35 443.33 1042.75 460.15 1009.66 473.35"/>
+    </g>
+    <g id="casablanca-line"><path class="hk-cls-1" d="M725.5,486c-270-179-633-86-633-86"/>
+      <polygon class="hk-cls-2" points="408.66 397.35 410.35 367.33 441.75 384.15 408.66 397.35"/>
+    </g>
+    <g id="casablanca-text">
+      <rect class="hk-cls-3" x="28.5" y="275.55" width="409" height="70.45"/>
+      <text class="hk-cls-4" transform="translate(51.07 306.67)">CASABLANCA MOHAMMED V<tspan x="17.64" y="27">INTERNATIONAL AIRPORT</tspan></text>
+    </g>
+    <g id="HK-text">
+      <rect class="hk-cls-3" x="1172.5" y="601.55" width="249" height="100.45"/>
+      <text class="hk-cls-4" transform="translate(1216.31 632.67)">HONG KONG<tspan x="-24.77" y="27">INTERNATIONAL</tspan><tspan x="25.1" y="54">AIRPORT</tspan></text>
+    </g>
+    <g id="marker-casablanca">
+      <circle class="hk-cls-5" cx="92.5" cy="402" r="40"/>
+      <circle class="hk-cls-6" cx="92.5" cy="402" r="8.66"/>
+    </g>
+    <g id="marker-hamad">
+      <circle class="hk-cls-5" cx="725.5" cy="486" r="40"/>
+      <circle class="hk-cls-6" cx="725.5" cy="486" r="8.66"/>
+    </g>
+    <g id="hk-marker-ndjili"><circle class="hk-cls-5" cx="329.5" cy="827" r="40"/>
+      <circle class="hk-cls-6" cx="329.5" cy="827" r="8.66"/>
+    </g>
+    <g id="hk-n_djili-text" data-name="n&apos;djili-text"><rect class="hk-cls-3" x="172.29" y="852.82" width="332.22" height="68.18"/>
+      <text class="hk-cls-4" transform="matrix(1, 0, 0, 1, 185.97, 883.94)">N&apos;DJILI INTERNATIONAL<tspan x="96.74" y="27">AIRPORT</tspan></text>
+    </g>
+    <g id="marker-HK">
+      <circle class="hk-cls-5" cx="1376.5" cy="547" r="40"/>
+      <circle class="hk-cls-6" cx="1376.5" cy="547" r="8.66"/>
+    </g>
+    <g id="hamad-text">
+      <rect class="hk-cls-3" x="550.5" y="508.55" width="349" height="68.45"/>
+      <text class="hk-cls-4" transform="translate(567.31 539.67)">HAMAD INTERNATIONAL<tspan x="102.1" y="27">AIRPORT</tspan></text>
+    </g>
 
+    <g id="hk-line">
+      <path class="hk-cls-1" d="M1123,348S851.31,133.08-1,113"/>
+      <polygon class="hk-cls-2" points="572.1 176.49 581.49 147.92 607.47 172.29 572.1 176.49"/>
+    </g>
+    <g id="marker-HK">
+      <circle class="hk-cls-5" cx="1120" cy="346" r="40"/>
+      <circle class="hk-cls-6" cx="1120" cy="346" r="8.66"/>
+    </g>
+    <g id="HK-text">
+      <rect class="hk-cls-3" x="995" y="400.55" width="249" height="100.45"/>
+      <text class="hk-cls-4" transform="translate(1038.81 431.67)">HONG KONG<tspan x="-24.77" y="27">INTERNATIONAL</tspan><tspan x="25.1" y="54">AIRPORT</tspan></text>
+    </g>
+
+    <g id="macau-line">
+      <line x1="1111" y1="346" x2="288" y2="513"/>
+      <polygon points="717.45 411.5 722.63 441.12 688.56 431.81 717.45 411.5"/>
+    </g>
+    <g id="marker-HK">
+      <circle class="hk-cls-5" cx="1119" cy="345" r="40"/>
+      <circle class="hk-cls-6" cx="1119" cy="345" r="8.66"/>
+    </g>
+    <g id="HK-text">
+      <rect class="hk-cls-3" x="995" y="400.55" width="249" height="100.45"/>
+      <text class="hk-cls-4" transform="translate(1038.81 431.67)">HONG KONG<tspan x="-24.77" y="27">INTERNATIONAL</tspan><tspan x="25.1" y="54">AIRPORT</tspan></text>
+    </g>
+    <g id="marker-macau">
+      <circle class="hk-cls-5" cx="282" cy="513" r="55.68"/>
+      <circle class="hk-cls-6" cx="282" cy="513" r="12.06"/>
+    </g>
+    <g id="macau-text">
+      <rect class="hk-cls-3" x="174" y="553.55" width="221" height="73.45"/>
+      <text class="hk-cls-4" transform="translate(194.63 584.67)">MACAU FERRY<tspan x="14.88" y="27">ATERMINAL</tspan></text>
+    </g>
   <defs>
 </svg>
 <!-- END:Hong Kong map svg elements -->
@@ -1608,6 +1738,13 @@
 
       'assets/maps/Nepal/desktop/map-01.jpg',
       'assets/maps/Nepal/mobile/m-map-01.jpg',
+
+      'assets/maps/HK/desktop/map-01.jpg',
+      'assets/maps/HK/desktop/map-02.jpg',
+
+      'assets/maps/HK/mobile/m-map-01.jpg',
+      'assets/maps/HK/mobile/m-map-02.jpg',
+      'assets/maps/HK/mobile/m-map-03.jpg',
     )
   </script>
 </div>

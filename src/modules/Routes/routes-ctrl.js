@@ -2,6 +2,7 @@ import Malaysia from './malaysia.js'
 import Cameroon from './cameroon.js'
 import Indonesia from './indonesia.js'
 import Nepal from './nepal.js'
+import HK from './hk.js'
 
 const RoutesCtrl = {}
 var	initCalledOnce = false
@@ -19,7 +20,7 @@ RoutesCtrl.init = (isDesktop) => {
 	}
   if (isDesktop){
     //return all controllers
-    return [Malaysia.MapCtrl1(), Malaysia.MapCtrl2(), Nepal.MapCtrl(), Cameroon.MapCtrl1()]
+    return [Malaysia.MapCtrl1(), Malaysia.MapCtrl2(), Nepal.MapCtrl(), Cameroon.MapCtrl1(), HK.MapCtrl()]
   } else {
     return [Malaysia.MapCtrlM1(), Malaysia.MapCtrlM2(), Malaysia.MapCtrlM3(), Indonesia.MapCtrlM1(), Nepal.MapCtrlM()]
   }

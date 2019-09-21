@@ -76,7 +76,7 @@ Indonesia.MapCtrlM1Click = () => {
   ]
 
   markers.forEach((marker, i)=>{
-  	marker.addEventListener('click', evt => {
+  	marker.addEventListener('touchend', evt => {
   		captions.forEach(item=>{
   			item.style.zIndex = 3
   		})
@@ -87,7 +87,7 @@ Indonesia.MapCtrlM1Click = () => {
   })
 
   captions.forEach(caption=>{
-  	caption.addEventListener('click', evt=>{
+  	caption.addEventListener('touchend', evt=>{
   		captions.forEach(item=>{
   			item.style.zIndex = 1
   		})
