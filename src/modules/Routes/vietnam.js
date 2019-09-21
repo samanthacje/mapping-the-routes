@@ -74,19 +74,20 @@ Vietnam.MapCtrl = ()=>{
   return controller
 }
 
+Vietnam.MapCtrlM = () => {
+	var map = $('#vietnam-routes-m-1')
 
-function changeBgM($map, src){
-  //used only on mobile
-  $map.querySelector('.routes-map-bg-m').src = src
-}
+  var controller = new ScrollMagic.Controller();
 
-function switchByDirM(e, $map, src_old, src){
-  var isForward = e.scrollDirection == 'FORWARD' ? true : false
-    if (isForward){
-      changeBgM($map, src)
-    } else {
-      changeBgM($map, src_old)
-    }
+  var navOffset = ($('.nav').offsetHeight + $('#progress-div').offsetHeight) || 0
+
+  var pin_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: '100%', offset: (-navOffset), reverse: true})
+    .on('start', function(){
+      this.setPin(this.triggerElement(), {pushFollowers: false})
+    })
+    .addTo(controller)
+
+  return controller
 }
 
 function changeBgD($map, src){
