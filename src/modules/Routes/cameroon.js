@@ -49,7 +49,7 @@ Cameroon.MapCtrl1 = () => {
         .add(TweenMax.to($('#djoum-text'), 0.5, visiable_opt))
     )
     .on('leave', () => {
-      var targets = [$('#arrows'), $('#melaka-label')]
+      var targets = [$('#bertoua-text'), $('#abong-text'),$('#mindourou-text'), $('#lomie-text'),$('#djoum-text')]
       TweenMax.killTweensOf(targets)
       TweenMax.to(targets, 0.5, hidden_opt)
     })
@@ -62,7 +62,7 @@ Cameroon.MapCtrl1 = () => {
         .add(TweenMax.to($('#arrow7'), 0.5, visiable_opt))
     )
     .on('leave', () => {
-      var targets = [$('#forest-fill'), $('#forest-label')]
+      var targets = [$('#arrow6'), $('#arrow7')]
       TweenMax.killTweensOf(targets)
       TweenMax.to(targets, 0.5, hidden_opt)
     })
