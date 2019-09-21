@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="details" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1466 1080" style="enable-background:new 0 0 1466 1080;" xml:space="preserve">
+<style type="text/css">
+	.cls-1{opacity:0.46;}
+	.cls-2{opacity:0.2;}
+	.cls-3{fill:#A36A2A;}
+	.st3{fill:#FFFFFF;}
+	.st4{font-family:'OpenSans-ExtraBold';}
+	.st5{font-size:25.56px;}
+	.st6{fill:none;stroke:#FC7A00;stroke-width:6;stroke-linejoin:round;stroke-dasharray:8,6;}
+	.st7{fill:#FC7A00;}
+	.st8{opacity:0.2;fill:#FC7A00;enable-background:new    ;}
+	.st9{fill:#FFFFFF;stroke:#FC7A00;stroke-width:4;stroke-linejoin:round;}
+</style>
+<title>Cameroon V3 no text</title>
+<g id="outskirts-area">
+	<g class="cls-1">
+		
+			<image style="overflow:visible;enable-background:new    ;" width="336" height="393" xlink:href="F2045DA9A4388517.png"  transform="matrix(1 0 0 1 722 402)">
+		</image>
+	</g>
+	<g class="cls-2">
+		
+			<image style="overflow:visible;enable-background:new    ;" width="420" height="497" xlink:href="F2045DA9A4388517.png"  transform="matrix(1 0 0 1 680 346)">
+		</image>
+	</g>
+</g>
+<g id="douala-text">
+	<rect x="354" y="534.5" class="cls-3" width="139" height="43.9"/>
+	<text transform="matrix(1 0 0 1 368.28 565.67)" class="st3 st4 st5">DOUALA</text>
+</g>
+<g id="arrow1">
+	<path class="st6" d="M903,495c0,0-185.4-115-429.7-10"/>
+	<polygon class="st7" points="481.2,472.2 488.4,486 470.1,486.8 	"/>
+</g>
+<g id="marker-douala">
+	<circle class="st8" cx="423" cy="506" r="40"/>
+	<circle class="st9" cx="423" cy="506" r="8.7"/>
+</g>
+<g id="marker-yaounde">
+	<circle class="st8" cx="657" cy="535" r="40"/>
+	<circle class="st9" cx="657" cy="535" r="8.7"/>
+</g>
+<g id="yaounde-text">
+	<rect x="582" y="556.5" class="cls-3" width="155" height="43.9"/>
+	<text transform="matrix(1 0 0 1 594.84 587.67)" class="st3 st4 st5">YAOUNDE</text>
+</g>
+<g id="arrow2">
+	<path class="st6" d="M852.9,685.8c0,0-138.6-9.8-184.1-65.8"/>
+	<polygon class="st7" points="681.5,623.8 668.8,632.7 665.7,614.7 	"/>
+</g>
+</svg>
