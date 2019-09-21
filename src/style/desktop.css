@@ -75,4 +75,9 @@
   	top: 0;
   	left: 100%;
   }
+
+  #geo-map-container{
+  	width: 70vw;
+		margin: 15px -10vw;
+	}
 }
