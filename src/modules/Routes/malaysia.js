@@ -2,8 +2,6 @@ import TweenMax from 'TweenMax'
 import ScrollMagic from 'ScrollMagic'
 import 'animation.gsap'
 
-import 'debug.addIndicators'
-
 const $ = q => document.querySelector(q)
 const MOBILE = 'assets/maps/Malaysia/mobile/'
 
