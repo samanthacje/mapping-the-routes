@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="details" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1466 1080" style="enable-background:new 0 0 1466 1080;" xml:space="preserve">
+<style type="text/css">
+	.cls-3{fill:#A36A2A;}
+	.st3{fill:#FFFFFF;}
+	.st4{font-family:'OpenSans-ExtraBold';}
+	.st5{font-size:25.56px;}
+	.st6{fill:none;stroke:#FC7A00;stroke-width:6;stroke-linejoin:round;stroke-dasharray:8,6;}
+	.st7{fill:#FC7A00;}
+	.st8{opacity:0.2;fill:#FC7A00;enable-background:new    ;}
+	.st9{fill:#FFFFFF;stroke:#FC7A00;stroke-width:4;stroke-linejoin:round;}
+</style>
+<title>Cameroon V3 no text</title>
+<g id="dairport-txt">
+	<rect x="165" y="545.5" class="cls-3" width="357" height="73.5"/>
+	<text transform="matrix(1 0 0 1 176.76 576.67)" class="st3 st4 st5">DOUALA INTERNATIONAL</text>
+	<text transform="matrix(1 0 0 1 286.29 607.34)" class="st3 st4 st5">AIRPORT</text>
+</g>
+<g id="yairport-text">
+	<rect x="719" y="428.5" class="cls-3" width="368" height="75.5"/>
+	<text transform="matrix(1 0 0 1 764.47 459.67)" class="st3 st4 st5">YAOUNDÉ NSIMALEN</text>
+	<text transform="matrix(1 0 0 1 733.72 490.34)" class="st3 st4 st5">INTERNATIONAL AIRPORT</text>
+</g>
+<g id="arrow4">
+	<path class="st6" d="M585,518c0,0,25-389-360-518"/>
+	<polygon class="st7" points="463.8,144.2 436.7,128.6 441.5,159.3 	"/>
+</g>
+<g id="arrow5">
+	<path class="st6" d="M587.5,522.1c0,0-245.9-120.3-587.5-129"/>
+	<polygon class="st7" points="152.4,391.6 122.7,401.2 148.7,418.3 	"/>
+</g>
+<g id="arrow3">
+	<path class="st6" d="M651,523c0,0,48-274-23-523"/>
+	<polygon class="st7" points="668.6,102.7 648.1,79.2 642.6,109.8 	"/>
+</g>
+<g id="arrow2">
+	<path class="st6" d="M651,523c0,0,68-370,554-523"/>
+	<polygon class="st7" points="915,152.9 933.8,128 902.8,128.9 	"/>
+</g>
+<g id="arrow1">
+	<path class="st6" d="M655.3,529.9c0,0,451.3,13.4,810.7,264.8"/>
+	<polygon class="st7" points="1108.7,631.5 1139.8,628.1 1117.8,606.1 	"/>
+</g>
+<g id="marker-yairport">
+	<circle class="st8" cx="650" cy="524" r="40"/>
+	<circle class="st9" cx="650" cy="524" r="8.7"/>
+</g>
+<g id="marker-dairport">
+	<circle class="st8" cx="588" cy="520" r="40"/>
+	<circle class="st9" cx="588" cy="520" r="8.7"/>
+</g>
+</svg>
