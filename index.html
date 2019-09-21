@@ -794,6 +794,32 @@
     <p>Their arrest was a watershed moment: It was the largest recorded seizure of pangolin scales in Nepal and the first haul from an African pangolin species. It led police to worry that Nepal has become a new transit point for pangolins heading to China.</p>
 
     <!-- nepal map 1  -->
+    <div class="routes-map-container mobile-hidden" id="nepal-routes-1">
+      <img class="routes-map-bg" src="assets/maps/Nepal/desktop/map-01.jpg">
+
+      <svg class="routes-map-svg" viewbox="0 0 1466 1080">
+          <use xlink:href="#marker-tribhuvan" />
+          <use xlink:href="#ndjili-line" />
+          <use xlink:href="#marker-ndjili" />
+          <use xlink:href="#istanbul-line" />
+          <use xlink:href="#istanbul-text" />
+          <use xlink:href="#tribhuvan-text" />
+          <use xlink:href="#n_djili-text" />
+          <use xlink:href="#marker-istanbul" />
+      </svg>
+
+      <div class="routes-map-para-static">
+        <p>Two Chinese nationals smuggled 162 kilograms of pangolins scales via commercial flights from the Democratic Republic of Congo, to Istanbul, to Kathmandu, where they were arrested. They wanted to travel to Shanghai, China.</p>
+      </div>
+    </div>
+
+    <div class="routes-map-container-m desktop-hidden" id="nepal-routes-m-1">
+      <img class="routes-map-bg-m" src="assets/maps/Nepal/mobile/m-map-01.jpg">
+    </div>
+
+    <div class="routes-map-para desktop-hidden">
+      <p>Two Chinese nationals smuggled 162 kilograms of pangolins scales via commercial flights from the Democratic Republic of Congo, to Istanbul, to Kathmandu, where they were arrested. They wanted to travel to Shanghai, China.</p>
+    </div>
 
     <div class="quote-para">
       <p>Information extracted from their mobile phones revealed that they were communicating with Chinese wildlife smugglers via WeChat, a Chinese messaging and payment app. Investigations identified a Nepali, a Bangladeshi and a Chinese accomplice. The three are still at large.</p>
@@ -1327,7 +1353,53 @@
 <!-- Nepal map svg elements -->
 <svg style="display: none;" viewbox="0 0 1466 1080">
   <defs>
-    
+    <style>
+      .nepal-cls-1,.nepal-cls-4{fill:#fc7a00;}.nepal-cls-1{opacity:0.2;isolation:isolate;}.nepal-cls-2,.nepal-cls-6{fill:#fff;}.nepal-cls-2,.nepal-cls-3{stroke:#fc7a00;stroke-linejoin:round;}.nepal-cls-2{stroke-width:4px;}.nepal-cls-3{fill:none;stroke-width:6px;stroke-dasharray:8 6;}.nepal-cls-5{fill:#a36a2a;}.nepal-cls-6{font-size:25px;font-family:OpenSans-ExtraBold, Open Sans;font-weight:800;}
+      #marker-tribhuvan,#marker-ndjili,#istanbul-text,#tribhuvan-text,#n_djili-text,#marker-istanbul, #ndjili-line polygon, #istanbul-line polygon{
+        opacity: 0;
+      }
+
+      #ndjili-line path {
+        stroke-dasharray: 852.44;
+        stroke-dashoffset: 852.44;
+      }
+
+      #istanbul-line path {
+        stroke-dasharray: 966;
+        stroke-dashoffset: 966;
+      }
+  </style>
+  <g id="marker-tribhuvan">
+    <circle class="nepal-cls-1" cx="1332" cy="366" r="40"/>
+    <circle class="nepal-cls-2" cx="1332" cy="366" r="8.66"/>
+  </g>
+  <g id="ndjili-line">
+    <path class="nepal-cls-3" d="M190,908S202,492.26,414.8,92.17"/>
+    <polygon class="nepal-cls-4" points="290.46 447.46 259.46 439.49 283.92 408.63 290.46 447.46"/>
+  </g>
+  <g id="marker-ndjili">
+    <circle class="nepal-cls-1" cx="189" cy="911" r="40"/>
+    <circle class="nepal-cls-2" cx="189" cy="911" r="8.66"/>
+  </g>
+  <g id="istanbul-line">
+    <path class="nepal-cls-3" d="M410.81,99.17S893.89,120.19,1332,365"/>
+    <polygon class="nepal-cls-4" points="827.88 182.49 839.08 152.51 867.18 180.09 827.88 182.49"/>
+  </g>
+  <g id="istanbul-text">
+    <rect class="nepal-cls-5" x="286.16" y="152.72" width="283.84" height="71.28"/>
+    <text class="nepal-cls-6" transform="translate(301.79 183.9) rotate(-0.03)">ISTANBUL ATATÜRK<tspan x="70.7" y="27">AIRPORT</tspan></text>
+  </g>
+  <g id="tribhuvan-text">
+    <rect class="nepal-cls-5" x="1025.4" y="389.32" width="406.6" height="71.68"/><text class="nepal-cls-6" transform="translate(1044.17 420.52) rotate(-0.03)">TRIBHUVAN INTERNATIONAL<tspan x="128.94" y="27">AIRPORT</tspan></text>
+  </g>
+  <g id="n_djili-text">
+    <rect class="nepal-cls-5" x="78.79" y="783.82" width="332.22" height="68.18"/>
+    <text class="nepal-cls-6" transform="translate(92.56 815.01) rotate(-0.03)">N&apos;DJILI INTERNATIONAL<tspan x="96.74" y="27">AIRPORT</tspan></text>
+  </g>
+  <g id="marker-istanbul">
+    <circle class="nepal-cls-1" cx="411" cy="99" r="40"/>
+    <circle class="nepal-cls-2" cx="411" cy="99" r="8.66"/>
+  </g>
   <defs>
 </svg>
 <!-- END:Nepal map svg elements -->
@@ -1384,6 +1456,9 @@
 
       'assets/maps/Indonesia/mobile/m-map-01.jpg',
       'assets/maps/Indonesia/mobile/m-map-02.jpg',
+
+      'assets/maps/Nepal/desktop/map-01.jpg',
+      'assets/maps/Nepal/mobile/m-map-01.jpg',
     )
   </script>
 </div>
