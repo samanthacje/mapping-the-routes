@@ -20,10 +20,20 @@ Indonesia.MapCtrl1 = () => {
   	$('#indonesia-marker-6'),
   ]
 
+  var captions = [
+  	$('#indonesia-caption-1'),
+  	$('#indonesia-caption-2'),
+  	$('#indonesia-caption-3'),
+  	$('#indonesia-caption-4'),
+  	$('#indonesia-caption-5'),
+  	$('#indonesia-caption-6'),
+  ]
+
   markers.forEach((marker, i)=>{
   	marker.addEventListener('click', evt => {
-			var caption = $(`#indonesia-caption-${i}`)
-			TweenMax.to(caption, 0.5, visiable_opt)
+  		return new TimelineMax()
+  			.add(TweenMax.to(captions, 0, hidden_opt))
+				.add(TweenMax.to(captions[i], 0.5, visiable_opt))
 		})
   })
 }
