@@ -6,7 +6,7 @@ var	initCalledOnce = false
 
 const callOnce = () => {
 	Indonesia.MapCtrl1()
-
+	Indonesia.MapCtrlM1Click()
 	return true
 }
 

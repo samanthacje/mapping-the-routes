@@ -563,7 +563,7 @@
 
     <div class="routes-map-container-m desktop-hidden" id="indonesia-routes-m-1">
       <img class="routes-map-bg-m" src="assets/maps/Indonesia/mobile/m-map-01.jpg">
-      <svg class="routes-map-svg" viewbox="0 0 375 667">
+      <svg class="routes-map-svg" viewbox="0 0 375 667" id="indonesia-routes-m-1-svg">
         <use xlink:href="#indonesia-marker-m-1" />
         <use xlink:href="#indonesia-marker-m-2" />
         <use xlink:href="#indonesia-marker-m-3" />
@@ -571,6 +571,52 @@
         <use xlink:href="#indonesia-marker-m-5" />
         <use xlink:href="#indonesia-marker-m-6" />
       </svg>
+      <style type="text/css">
+        #indonesia-routes-m-1-svg{
+          z-index: 2
+        }
+        .indonesia-caption-m{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
+          width: 100vw;
+          height: 100vh;
+          padding-left: 10vw;
+          padding-right: 10vw;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          opacity: 0;
+        }
+        .indonesia-caption-m p{
+          padding: 8vw 5vw;
+          background: rgb(52, 52, 52);
+          color: #fff
+        }
+      </style>
+      <div class="indonesia-caption-m" id="indonesia-caption-m-1">
+        <p><b>102 pangolins seized - Nov 2015</b><br><br>102 pangolins were seized here, as smugglers were about to transport them to Malaysia via the Melaka Straits. Nine of the pangolins had died.</p>
+        <p><b>128 pangolins seized - Feb 2013</b><br><br>Belawan Customs and Excise Office (KPPBC) marine patrol team seized 128 pangolins as they were being smuggled out towards Malaysia, via the Melaka Straits.</p>
+      </div>
+      <div class="indonesia-caption-m" id="indonesia-caption-m-2">
+        <p><b>Over one tonne of pangolins seized - June 2017</b><br><br>Over a ton of live pangolins, pangolin parts and scales were seized at a warehouse here. The stash included around 225 individual pangolins, five large sacks of wet pangolins, and four large sacks of dried pangolin skin.</p>
+      </div>
+      <div class="indonesia-caption-m" id="indonesia-caption-m-3">
+        <p><b>102 pangolins seized - 2013</b><br><br>102 live pangolins seized at the Port of Batubara Regency, onboard a ship. The ship's captain and four crewmembers were arrested. The captain admitted that he was instructed to transport the pangolins to Malaysia.</p>
+      </div>
+      <div class="indonesia-caption-m" id="indonesia-caption-m-4">
+        <p><b>May 2014</b><br><br>Two persons were arrested while attempting to smuggle four pangolins to Malaysia by ship, from the Tanjung Balai Port.</p>
+      </div>
+      <div class="indonesia-caption-m" id="indonesia-caption-m-5">
+        <p><b>101 pangolins seized - 24 Oct 2017</b><br><br>101 pangolins seized by navy personnel as they were being smuggled to Malaysia via boat.</p>
+      </div>
+      <div class="indonesia-caption-m" id="indonesia-caption-m-6">
+        <p><b>89 pangolins seized - Unspecified date</b><br><br>Police thwarted a plan to smuggle 89 pangolins to Malaysia. Four people from South Sumatra were named as suspects. The pangolins were transported by land with two cars to a small port on Bengkalis Island, where they were to be smuggled out to Malaysia via boat.</p>
+      </div>
+
     </div>
 
     <div class="routes-map-para" id="indonesia-text-mobile">

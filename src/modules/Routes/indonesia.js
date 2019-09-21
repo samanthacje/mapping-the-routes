@@ -3,6 +3,7 @@ import ScrollMagic from 'ScrollMagic'
 import 'animation.gsap'
 
 const $ = q => document.querySelector(q)
+const $$ = q => document.querySelectorAll(q)
 
 const Indonesia = {}
 
@@ -51,6 +52,51 @@ Indonesia.MapCtrlM1 = () => {
 
   return controller
 }
+
+Indonesia.MapCtrlM1Click = () => {
+	var visiable_opt = {opacity: 1, ease:Linear.easeNone},
+      hidden_opt = {opacity: 0, ease:Linear.easeNone}
+
+	var markers = [
+  	$('#indonesia-marker-m-1'),
+  	$('#indonesia-marker-m-2'),
+  	$('#indonesia-marker-m-3'),
+  	$('#indonesia-marker-m-4'),
+  	$('#indonesia-marker-m-5'),
+  	$('#indonesia-marker-m-6'),
+  ]
+
+   var captions = [
+  	$('#indonesia-caption-m-1'),
+  	$('#indonesia-caption-m-2'),
+  	$('#indonesia-caption-m-3'),
+  	$('#indonesia-caption-m-4'),
+  	$('#indonesia-caption-m-5'),
+  	$('#indonesia-caption-m-6'),
+  ]
+
+  markers.forEach((marker, i)=>{
+  	marker.addEventListener('click', evt => {
+  		captions.forEach(item=>{
+  			item.style.zIndex = 3
+  		})
+  		return new TimelineMax()
+  			.add(TweenMax.to(captions, 0, hidden_opt))
+				.add(TweenMax.to(captions[i], 0.5, visiable_opt))
+		})
+  })
+
+  captions.forEach(caption=>{
+  	caption.addEventListener('click', evt=>{
+  		captions.forEach(item=>{
+  			item.style.zIndex = 1
+  		})
+  		TweenMax.to(captions, 0, hidden_opt)
+  	})
+  })
+
+}
+
 
 
 export default Indonesia
