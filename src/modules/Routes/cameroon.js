@@ -60,9 +60,19 @@ Cameroon.MapCtrl1 = () => {
       new TimelineMax()
         .add(TweenMax.to($('#arrow6'), 0.5, visiable_opt))
         .add(TweenMax.to($('#arrow7'), 0.5, visiable_opt))
+        .add(TweenMax.to($('#marker-douala'), 0.5, visiable_opt))
+        .add(TweenMax.to($('#marker-yaounde'), 0.5, visiable_opt))
+        .add(TweenMax.to($('#yaounde-text'), 0.5, visiable_opt))
+        .add(TweenMax.to($('#douala-text'), 0.5, visiable_opt))
+        .addCallback(()=>{
+          pulseMarker([
+            $('#marker-douala'),
+            $('#marker-yaounde'),
+          ])
+        }, 0.7)
     )
     .on('leave', () => {
-      var targets = [$('#arrow6'), $('#arrow7')]
+      var targets = [$('#arrow6'), $('#arrow7'),$('#marker-douala'), $('#marker-yaounde'),$('#yaounde-text'), $('#douala-text')]
       TweenMax.killTweensOf(targets)
       TweenMax.to(targets, 0.5, hidden_opt)
     })
