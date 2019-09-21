@@ -118,11 +118,11 @@ Cameroon.MapCtrlM1 = () => {
   var duration_per = pin_scene.duration() / 3
   //first scene trigger inmediately on map pin, use onLeave triggerHook
   var second_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (duration_per-navOffset), reverse: true})
-    .on('start', (e) => { switchByDir(e, map, Cameroon.pics_m[1], Cameroon.pics_m[0]) })
+    .on('start', (e) => { switchByDir(e, map, Cameroon.pics_m[0], Cameroon.pics_m[1]) })
     .addTo(controller);
 
   var thrid_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (2*duration_per-navOffset), reverse: true})
-    .on('start', (e) => { switchByDir(e, map, Cameroon.pics_m[2], Cameroon.pics_m[1]) })
+    .on('start', (e) => { switchByDir(e, map, Cameroon.pics_m[1], Cameroon.pics_m[2]) })
     .addTo(controller);
 
   return controller
