@@ -10,10 +10,9 @@ ProgressBar.ctrlHeaderAudio = ()=>{
   var video = $('#header-video')
   var controller = new ScrollMagic.Controller();
   // build scene
-  var scene = new ScrollMagic.Scene({triggerElement: $('#header-caption'), triggerHook: 'onLeave', duration: 0})
-    .on('start', function(e){
-      var dir = e.scrollDirection,
-          scene = e.target
+  var scene = new ScrollMagic.Scene({triggerElement: $('.header'), triggerHook: 'onLeave', duration: $('.header').offsetHeight})
+    .on('end', function(e){
+      var dir = e.scrollDirection
       if (dir == 'FORWARD') {
         console.log('muted')
         video.muted = true
@@ -23,6 +22,8 @@ ProgressBar.ctrlHeaderAudio = ()=>{
       }
     })
     .addTo(controller)
+
+  return controller
 }
 
 ProgressBar.initScrollController = ()=>{
@@ -39,6 +40,8 @@ ProgressBar.initScrollController = ()=>{
   var scene = new ScrollMagic.Scene({triggerElement: $body, triggerHook: 'onLeave', duration: bodyHeight, tweenChanges: true})
           .setTween(tween)
           .addTo(controller)
+
+  return controller
 }
 
 ProgressBar.initClickNav = ()=>{

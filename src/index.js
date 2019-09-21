@@ -15,8 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
 	var isDesktopPrev = window.matchMedia("(min-device-width: 480px)").matches
 	loadHeaderVideo(isDesktopPrev)
 	
-	ProgressBar.ctrlHeaderAudio()
-	ProgressBar.initScrollController()
+	var audioCtrl = ProgressBar.ctrlHeaderAudio()
+	var progressCtrl = ProgressBar.initScrollController()
 	ProgressBar.initClickNav()
 
 	Hash.initHashController()
@@ -40,6 +40,12 @@ window.addEventListener('DOMContentLoaded', () => {
 	    ctrls_prev.forEach(ctrl=>{ ctrl.destroy(true) }) //destroy ctrls, reset scenes
 			RoutesCtrl.init(isDesktop)
 	  }
+	  //reset audio ctrl
+	  audioCtrl.destroy(true)
+	  audioCtrl = ProgressBar.ctrlHeaderAudio()
+	  //reset scroll bar progress
+	  progressCtrl.destroy(true)
+	  progressCtrl =  ProgressBar.initScrollController()
 	}	
 });
 
