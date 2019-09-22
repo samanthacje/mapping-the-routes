@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const cleanWebpackPlugin = require('clean-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -93,6 +94,15 @@ module.exports = {
         splitChunks: {
             chunks: 'all'
         },
-        usedExports: true
+        usedExports: true,
+        minimizer: [
+          new UglifyJsPlugin({
+            uglifyOptions: {
+              output: {
+                comments: false,
+              },
+            },
+          }),
+        ],
     },
 };
