@@ -151,6 +151,19 @@
 		background: none;
 	}
 
+	.routes-map-para p b{
+		font-family: open sans bold;
+		text-transform: uppercase;
+	}
+
+	.routes-map-para h2{
+		text-transform: uppercase;
+		color: #9c5e18;
+		font-family: open sans bold;
+		line-height: 1.2;
+		font-size: 22px;
+	}
+
 	.routes-map-static{
 		margin: 0 -25vw;
 	}
@@ -177,6 +190,6 @@
 	}
 
 	#indonesia-text-mobile, #nepal-text-mobile, .routes-map-desktop-hidden{
-		display: none;		
+		display: none;
 	}
 }
