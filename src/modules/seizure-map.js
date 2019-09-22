@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-import ScrollMagic from 'ScrollMagic'
+// import ScrollMagic from 'ScrollMagic'
 
 const SeizureMap = {}
 const $ = q => document.querySelector(q)
@@ -11,7 +11,7 @@ var svg = d3.select("#geo-map-container")
             .append("svg")
             .attr('x', 0)
             .attr('y', 0)
-            .attr('viewBox', '0 0 960 630') //500 for map, 120 for timeline, 10 for padding-top
+            .attr('viewBox', '0 0 960 550') //500 for map, 40 for timeline, 10 for padding-top
             .attr('id', 'geo-map')
 
 var bg = svg.append('rect').attr('width', '100%').attr('height', '500').attr('fill', '#3b3b3b')
@@ -26,6 +26,26 @@ var g_world = svg.append("g")
 var projection = d3.geoMercator()
                     .scale(160)
                     .translate([150, 320]);
+
+var g_bubbles = svg.append("g")
+                  .attr('clip-path', 'url(#seizure-map-clip)')
+                  .attr("class", "seizure-bubbles")
+
+var zoom = d3.zoom()
+    .scaleExtent([1, 8])
+    .on('zoom', zoomed);
+
+function zoomed() {
+  g_world
+    .selectAll('path') // To prevent stroke width from scaling
+    .attr('transform', d3.event.transform);
+
+  g_bubbles
+    .selectAll('circle') // To prevent stroke width from scaling
+    .attr('transform', d3.event.transform);
+}
+
+svg.call(zoom)
 
 //path generator: convert geojson feature to svg path
 var path = d3.geoPath().projection(projection);
@@ -50,7 +70,7 @@ var count_text =  svg.append("text")
 	    .text("0");
 
 var timeline = svg.append("g").attr("class", "timeline")
-// var bursh_g = timeline.append("g").attr("class", "brush")
+var bursh_g = timeline.append("g").attr("class", "brush")
 
 // tooltips
 var bartip = d3.select('.container').append('div')
@@ -58,33 +78,33 @@ var bartip = d3.select('.container').append('div')
     .style('display', 'none');
 
 //legend
-var legend = svg.append('g')
-    .attr('transform', 'translate(780, 450)').attr('id', 'seizure-map-legend')
-  legend
-    .append('circle')
-      .attr('x', 0).attr('y', 0)
-      .attr('r', 6).attr('fill', 'rgba(240, 135, 24)')
-      .attr('stroke-width', '0.5px')
-      .attr('stroke', '#fff')
-  legend
-    .append('text')
-      .attr('x', 14).attr('y', 6)
-      .attr('class', 'legend-text')
-      .text('Current Year')
+// var legend = svg.append('g')
+//     .attr('transform', 'translate(780, 450)').attr('id', 'seizure-map-legend')
+//   legend
+//     .append('circle')
+//       .attr('x', 0).attr('y', 0)
+//       .attr('r', 6).attr('fill', 'rgba(240, 135, 24)')
+//       .attr('stroke-width', '0.5px')
+//       .attr('stroke', '#fff')
+//   legend
+//     .append('text')
+//       .attr('x', 14).attr('y', 6)
+//       .attr('class', 'legend-text')
+//       .text('new entries')
 
 //play or pause ctrl
-var playBtn = svg.append('g').attr('id', 'seizure-map-play-btn')
-    .attr('transform', 'translate(50, 450)')
-var playPause = playBtn
-    .append('path').attr('id', 'play-pause')
-      .attr('transform', 'translate(-9, -9)')
-      .attr('d', "M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z")
-      .attr('fill', '#fff')
-var playCont = playBtn
-    .append('path').attr('id', 'play-cont')
-      .attr('transform', 'translate(-9, -9)')
-      .attr('d', "M3 22v-20l18 10-18 10z")
-      .attr('fill', '#fff')
+// var playBtn = svg.append('g').attr('id', 'seizure-map-play-btn')
+//     .attr('transform', 'translate(50, 450)')
+// var playPause = playBtn
+//     .append('path').attr('id', 'play-pause')
+//       .attr('transform', 'translate(-9, -9)')
+//       .attr('d', "M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z")
+//       .attr('fill', '#fff')
+// var playCont = playBtn
+//     .append('path').attr('id', 'play-cont')
+//       .attr('transform', 'translate(-9, -9)')
+//       .attr('d', "M3 22v-20l18 10-18 10z")
+//       .attr('fill', '#fff')
 
 SeizureMap.renderMap = function(){
 	Promise.all([
@@ -127,7 +147,7 @@ SeizureMap.renderMap = function(){
     radiusScale.domain(d3.extent(dataForMap, function(d) { return +d.ESTNUM; }));
 
     makeTimeline(dataForMap, dataForTimeline);
-    initAutoPlayCtrl(dataForMap)
+    // initAutoPlayCtrl(dataForMap)
 
 		g_world
 	    .selectAll("path")
@@ -141,64 +161,66 @@ SeizureMap.renderMap = function(){
 function makeTimeline(dataForMap, dataForTimeline) {
   var margin = { top: 10, right: 10, bottom: 20, left: 15 },
       w = 960 - margin.left - margin.right,
-      h = 120 - margin.bottom //margin-top is gap by timeline group translate
+      // h = 120 - margin.bottom //margin-top is gap by timeline group translate
+      h = 40 - margin.bottom //margin-top is gap by timeline group translate
 
   timeline
       .attr("transform", "translate("+ margin.left + " , 510)");
 
   //calculate sum of each year
-  var year_sums = {}
-  dataForTimeline.forEach(d =>{
-  	var year = d.TIME.getFullYear() + ""
-  	if (!year_sums[year]) {
-  		year_sums[year] = 0
-  	}
-  	year_sums[year] += +d.ESTNUM
-  })
+  // var year_sums = {}
+  // dataForTimeline.forEach(d =>{
+  // 	var year = d.TIME.getFullYear() + ""
+  // 	if (!year_sums[year]) {
+  // 		year_sums[year] = 0
+  // 	}
+  // 	year_sums[year] += +d.ESTNUM
+  // })
 
-  var bar_data = Object.keys(year_sums).map(year => ({
-  	TIME: new Date(+year, 1, 1),
-  	TOTAL: year_sums[year]
-  }))
+  // var bar_data = Object.keys(year_sums).map(year => ({
+  // 	TIME: new Date(+year, 1, 1),
+  // 	TOTAL: year_sums[year]
+  // }))
 
   var x = d3.scaleTime()
       .domain(d3.extent(dataForTimeline.map(function(d) { return d.TIME; })))
       .range([0, w]);
 
-  var y = d3.scaleLinear()
-      .domain(d3.extent(bar_data.map(function(d) { return d.TOTAL; })))
-      .range([h, 0]);
+  // var y = d3.scaleLinear()
+  //     .domain(d3.extent(bar_data.map(function(d) { return d.TOTAL; })))
+  //     .range([h, 0]);
 
   var xAxis = d3.axisBottom(x)
+    .ticks(20)
 
-  var yAxis = d3.axisRight(y)
-  	.ticks(3)
-  	.tickFormat(d3.format("~s"));;
+  // var yAxis = d3.axisRight(y)
+  // 	.ticks(3)
+  // 	.tickFormat(d3.format("~s"));;
 
- 	timeline.append("g")
- 			.attr("class", "bars")
- 			.selectAll('rect')
- 			.data(bar_data, function(d){return d.id})
- 			.enter().append('rect').attr("class", 'bar')
- 			.style('fill', "#dcba7d")
- 			.attr('x', function(d){return x(d.TIME)})
- 			.attr('width', (Math.round(w / 19) - 10)+'px')
- 			.attr('y', function(d){return y(d.TOTAL)})
- 			.attr("height", function(d) { return h - y(d.TOTAL); })
-      .on('mouseover', function (){
-        bartip.style('display', 'inline');
-        d3.select(this).style('opacity', 0.5)
-      })
-      .on('mousemove', function (d){
-        bartip
-          .html(d.TIME.getFullYear() + '<hr/>' + d.TOTAL)
-          .style('left', (d3.event.pageX - 34) + 'px')
-          .style('top', (d3.event.pageY - 12) + 'px');
-      })
-      .on('mouseout', function (){
-        bartip.style('display', 'none');
-        d3.select(this).style('opacity', 1)
-      })
+ 	// timeline.append("g")
+ 	// 		.attr("class", "bars")
+ 	// 		.selectAll('rect')
+ 	// 		.data(bar_data, function(d){return d.id})
+ 	// 		.enter().append('rect').attr("class", 'bar')
+ 	// 		.style('fill', "#dcba7d")
+ 	// 		.attr('x', function(d){return x(d.TIME)})
+ 	// 		.attr('width', (Math.round(w / 19) - 10)+'px')
+ 	// 		.attr('y', function(d){return y(d.TOTAL)})
+ 	// 		.attr("height", function(d) { return h - y(d.TOTAL); })
+  //     .on('mouseover', function (){
+  //       bartip.style('display', 'inline');
+  //       d3.select(this).style('opacity', 0.5)
+  //     })
+  //     .on('mousemove', function (d){
+  //       bartip
+  //         .html(d.TIME.getFullYear() + '<hr/>' + d.TOTAL)
+  //         .style('left', (d3.event.pageX - 34) + 'px')
+  //         .style('top', (d3.event.pageY - 12) + 'px');
+  //     })
+  //     .on('mouseout', function (){
+  //       bartip.style('display', 'none');
+  //       d3.select(this).style('opacity', 1)
+  //     })
 
 
   timeline.append("g")
@@ -206,55 +228,57 @@ function makeTimeline(dataForMap, dataForTimeline) {
       .attr("transform", "translate(0," + h + ")")
       .call(xAxis);
 
-  timeline.append("g")
-      .attr("class", "y axis")
-      .call(yAxis);
+  // timeline.append("g")
+  //     .attr("class", "y axis")
+  //     .call(yAxis);
 
-  timeline.append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("dy", "-1em")
-      .style("text-anchor", "end")
-      .style("font-size", '8px')
-      .text("# Pangolins");
+  // timeline.append("text")
+  //     .attr("transform", "rotate(-90)")
+  //     .attr("dy", "-1em")
+  //     .style("text-anchor", "end")
+  //     .style("font-size", '8px')
+  //     .text("# Pangolins");
 
   // Add brush to timeline, hook up to callback\
   //brush reference: http://rajvansia.com/scatterplotbrush-d3-v4.html
-  // var brush = d3.brushX()
-  //     .extent([[0, 0], [w, h]]) // brushable area
-  //     .on("brush end", function() { brushCallback(dataForMap, x); })
-  // var initial_range = [new Date(2000, 1, 1), new Date(2001, 12, 31)].map(x)
+  var brush = d3.brushX()
+      .extent([[0, 0], [w, h]]) // brushable area
+      .on("brush end", function() { brushCallback(dataForMap, x); })
+  var initial_range = [new Date(2019, 0, 1), x.domain()[1]].map(x)
   
-  // bursh_g
-  //     .call(brush)
-  //   	 .call(brush.move, initial_range)
+  bursh_g
+      .call(brush)
+    	 .call(brush.move, initial_range)
 };
 
 // Called whenever the timeline brush range (extent) is updated
 // Filters the map data to those points that fall within the selected timeline range
-// function brushCallback(dataForMap, x) {
-// 	if (!d3.event.selection){
-//   	updateTitleText(null, []);
-//   	updateMapPoints([])
-//   	return
-// 	}
-//   var newDateRange = d3.event.selection.map(x.invert) || x.domain()
-//   var filteredData = dataForMap.filter(d => (d.TIME >= newDateRange[0] && d.TIME <= newDateRange[1]) )
-//   updateMapPoints(filteredData)
-//   updateTitleText(newDateRange, filteredData);
-// }
+function brushCallback(dataForMap, x) {
+	if (!d3.event.selection){
+  	updateTitleText(null, []);
+  	updateMapPoints([])
+  	return
+	}
+  var newDateRange = d3.event.selection.map(x.invert) || x.domain()
+  console.log(newDateRange)
+  var filteredData = dataForMap.filter(d => (d.TIME >= newDateRange[0] && d.TIME <= newDateRange[1]) )
+  updateMapPoints(filteredData)
+  updateTitleText(newDateRange, filteredData);
+}
 
 // Updates the vis title text to include the passed date array: [start Date, end Date]
 function updateTitleText(newDateArray, filteredData) {
     if (!newDateArray) {
         range.text("Pangolin seizures (select a time range)");
     } else {
-        var from = (newDateArray[0].getMonth() + 1) + "/" +
-                   (newDateArray[0].getDay() + 1) + "/" +
-                   newDateArray[0].getFullYear(),
-            to =   (newDateArray[1].getMonth() + 1) + "/" +
-                   (newDateArray[1].getDay() + 1) + "/" +
-                   newDateArray[1].getFullYear();
-        range.text(from + " - " + to);
+        var from = newDateArray[0].getFullYear() + "-" +
+                    (newDateArray[0].getMonth() + 1)+ "-" +
+                   (newDateArray[0].getDate()) ,
+            to =   newDateArray[1].getFullYear() + "-" +
+                   (newDateArray[1].getMonth() + 1) + "-" +
+                   (newDateArray[1].getDate()) 
+                   
+        range.text(from + " ~ " + to);
     }
     //update count
     var total = filteredData.map(d=>+d.ESTNUM).reduce((acc, cur)=>acc+cur, 0)
@@ -265,9 +289,35 @@ function updateTitleText(newDateArray, filteredData) {
       .attr('width', +count_text.node().getBBox().width + 20)
 }
 
+function updateMapPoints(data){
+  var circles = g_bubbles.selectAll("circle.seizure-bubble").data(data, function(d) { return d.id });
+  circles // update existing points
+      .attr("fill", "rgba(201, 62, 62, 0.3)")
+      .attr("cx", function(d) { return projection([+d.Longitude, +d.Latitude])[0]; })
+      .attr("cy", function(d) { return projection([+d.Longitude, +d.Latitude])[1]; })
+      .attr("r",  function(d) { return radiusScale(+d.ESTNUM); });
+
+  circles.enter().append("circle") 
+      .attr('class', 'seizure-bubble')
+      .attr("fill", "rgba(201, 62, 62, 0.3)")
+      // .attr("fill", "rgba(240, 135, 24, 0.3)")
+      .attr("cx", function(d) { return projection([+d.Longitude, +d.Latitude])[0]; })
+      .attr("cy", function(d) { return projection([+d.Longitude, +d.Latitude])[1]; })
+      .attr("r",  0)
+    .transition()
+      .duration(500)
+      .attr("r",  function(d) { return radiusScale(+d.ESTNUM); });
+
+  circles.exit() // exiting points
+      .attr("r",  function(d) { return radiusScale(+d.ESTNUM); })
+    .transition()
+      .duration(500)
+      .attr("r", 0).remove();
+}
+
 // Updates the points displayed on the map, to those in the passed data array
-function updateMapPoints(data, year) {
-    var circles = svg.selectAll("circle.seizure-bubble").data(data, function(d) { return d.id });
+function updateMapPointsAutoPlay(data, year) {
+    var circles = g_bubbles.selectAll("circle.seizure-bubble").data(data, function(d) { return d.id });
 
     if (year == "2000") { //reset
       svg.selectAll("circle.seizure-bubble").remove()
@@ -288,7 +338,7 @@ function updateMapPoints(data, year) {
         .duration(500)
         .attr("fill", "rgba(201, 62, 62, 0.3)")
 };
-
+/*
 function initAutoPlayCtrl(data) {
   var controller = new ScrollMagic.Controller();
   var interval = null
@@ -306,7 +356,7 @@ function initAutoPlayCtrl(data) {
     intervalSet = false
     //render final screen
     svg.selectAll("circle.seizure-bubble").remove()
-    updateMapPoints(data)
+    updateMapPointsAutoPlay(data)
     updateLabels(data, 2019)
   }
 
@@ -357,7 +407,7 @@ function autoplay(data, stage){
   var changeYear = function(){
     var curr_year = years[stage.curr_idx]
     var yearData = data.filter(d=>d.YEAR == curr_year)
-    updateMapPoints(yearData, curr_year)
+    updateMapPointsAutoPlay(yearData, curr_year)
     stage.curr_idx = (stage.curr_idx + 1) % years.length
     updateLabels(data, curr_year)
   }
@@ -375,5 +425,7 @@ function updateLabels(data, curr_year){
     .attr('y', count_text.node().getBBox().y)
     .attr('width', +count_text.node().getBBox().width + 20)
 }
+
+*/
 
 export default SeizureMap
