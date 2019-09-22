@@ -260,7 +260,6 @@ function brushCallback(dataForMap, x) {
   	return
 	}
   var newDateRange = d3.event.selection.map(x.invert) || x.domain()
-  console.log(newDateRange)
   var filteredData = dataForMap.filter(d => (d.TIME >= newDateRange[0] && d.TIME <= newDateRange[1]) )
   updateMapPoints(filteredData)
   updateTitleText(newDateRange, filteredData);
