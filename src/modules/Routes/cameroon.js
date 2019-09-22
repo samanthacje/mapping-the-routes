@@ -58,18 +58,18 @@ Cameroon.MapCtrl1 = () => {
   var second_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (duration_per-navOffset), reverse: true})
     .on('enter', () =>
       new TimelineMax()
-        .add(TweenMax.to($('#cam-arrow6'), 0.5, visiable_opt))
-        .add(TweenMax.to($('#cam-arrow7'), 0.5, visiable_opt))
+				.add(TweenMax.to($('#cam-arrow7'), 0.5, visiable_opt))
         .add(TweenMax.to($('#marker-douala'), 0.5, visiable_opt))
+				.add(TweenMax.to($('#douala-text'), 0.5, visiable_opt))
+				.add(TweenMax.to($('#cam-arrow6'), 0.5, visiable_opt))
         .add(TweenMax.to($('#marker-yaounde'), 0.5, visiable_opt))
         .add(TweenMax.to($('#yaounde-text'), 0.5, visiable_opt))
-        .add(TweenMax.to($('#douala-text'), 0.5, visiable_opt))
-        // .addCallback(()=>{
-        //   pulseMarker([
-        //     $('#marker-douala'),
-        //     $('#marker-yaounde'),
-        //   ])
-        // }, 0.7)
+        .addCallback(()=>{
+           pulseMarker([
+             $('#marker-douala'),
+             $('#marker-yaounde'),
+           ])
+         }, 0.7)
     )
     .on('leave', () => {
       var targets = [$('#cam-arrow6'), $('#cam-arrow7'),$('#marker-douala'), $('#marker-yaounde'),$('#yaounde-text'), $('#douala-text')]
@@ -80,17 +80,19 @@ Cameroon.MapCtrl1 = () => {
 
   var thrid_scene_targets = [$('#marker-yairport'), $('#marker-dairport'),$('#cam-arrow1'),$('#cam-arrow2'),$('#cam-arrow3'),$('#cam-arrow4'),$('#cam-arrow5'),$('#yairport-text'),$('#dairport-txt')]
   var thrid_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (2 * duration_per-navOffset), reverse: true})
-    .on('start', (e) => {
+
+		.on('start', (e) => {
       var isForward = e.scrollDirection == 'FORWARD' ? true : false
+			switchByDirD(e, map, 'assets/maps/Cameroon/desktop/map-01.jpg', 'assets/maps/Cameroon/desktop/map-02.jpg')
       if (isForward){
         return new TimelineMax()
           .add(TweenMax.to(thrid_scene_targets, 0.5, visiable_opt))
-          // .addCallback(()=>{
-          //   pulseMarker([
-          //     $('#marker-yairport'),
-          //     $('#marker-dairport'),
-          //   ])
-          // }, 0.7)
+           .addCallback(()=>{
+             pulseMarker([
+               $('#marker-yairport'),
+               $('#marker-dairport'),
+             ])
+           }, 0.7)
       } else {
         TweenMax.killTweensOf(thrid_scene_targets)
         TweenMax.to(thrid_scene_targets, 0.5, hidden_opt)
@@ -128,8 +130,8 @@ Cameroon.MapCtrlM1 = () => {
 }
 
 function pulseMarker(markers){
-	var inners = markers.map(item=>item.querySelector('.marker-inner'))
-	var outters = markers.map(item=>item.querySelector('.marker-outter'))
+	var inners = markers.map(item=>item.querySelector('.st9'))
+	var outters = markers.map(item=>item.querySelector('.st8'))
 
 	// TweenMax.fromTo(inners, 3, {attr:{r: 12.06}}, {attr:{r: 20}}).repeat(-1)//.yoyo(true)
 	TweenMax.fromTo(outters, 1, {attr:{r: 20}, opacity: 0.4}, {attr:{r: 55.68}, opacity: 0}).repeat(-1)
@@ -147,6 +149,20 @@ function switchByDir(e, $map, src_old, src){
     } else {
       changeBg($map, src_old)
     }
+}
+
+function switchByDirD(e, $map, src_old, src){
+  var isForward = e.scrollDirection == 'FORWARD' ? true : false
+    if (isForward){
+      changeBgD($map, src)
+    } else {
+      changeBgD($map, src_old)
+    }
+}
+
+function changeBgD($map, src){
+  //used only on mobile
+  $map.querySelector('.routes-map-bg').src = src
 }
 
 export default Cameroon
