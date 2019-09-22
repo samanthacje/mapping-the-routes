@@ -32,12 +32,13 @@ Vietnam.MapCtrl = ()=>{
       if (isForward){
       	return new TimelineMax()
       		.add(TweenMax.to([$('#marker-cau'), $('#cau-text')], 0.5, visiable_opt))
-      		.add(TweenMax.to($('#mongcai-line'), 0.5, visiable_opt))
+      		.add(TweenMax.to($('#mongcai-line'), 1, {strokeDashoffset: 2429.2, ease:Power2.easeOut}))
       		.add(TweenMax.to([$('#marker-mong'), $('#mong-text')], 0.5, visiable_opt))
 
       } else {
         TweenMax.killTweensOf(targets)
-        TweenMax.to(targets, 0.5, hidden_opt)
+        TweenMax.to([$('#marker-cau'), $('#cau-text'), $('#marker-mong'), $('#mong-text')], 0.5, hidden_opt)
+        TweenMax.to($('#mongcai-line'), 0.5, {strokeDashoffset: 1214.60, ease:Power2.easeOut})
       }
     })
     .addTo(controller);
@@ -47,15 +48,18 @@ Vietnam.MapCtrl = ()=>{
       var isForward = e.scrollDirection == 'FORWARD' ? true : false
       var targets = [$('#vietnam-circles'),$('#vietnam-legend')]
       if (isForward){
-        TweenMax.to(targets, 0.5, visiable_opt)
+        return new TimelineMax()
+          .add(TweenMax.to([$('#marker-cau'), $('#marker-mong')], 0.5, hidden_opt), 0)
+          .add(TweenMax.to(targets, 0.5, visiable_opt), 0)
       } else {
         TweenMax.killTweensOf(targets)
         TweenMax.to(targets, 0.5, hidden_opt)
+        TweenMax.to([$('#marker-cau'), $('#marker-mong')], 0.5, visiable_opt)
       }
     })
     .on('end', (e) =>{
       var isForward = e.scrollDirection == 'FORWARD' ? true : false
-      var targets = [$('#marker-cau'), $('#cau-text'), $('#mongcai-line'), $('#marker-mong'), $('#mong-text'), $('#vietnam-circles'),$('#vietnam-legend')]
+      var targets = [$('#cau-text'), $('#mongcai-line'), $('#mong-text'), $('#vietnam-circles'),$('#vietnam-legend')]
       if (isForward){
         TweenMax.to(targets, 0.5, hidden_opt)
       } else {

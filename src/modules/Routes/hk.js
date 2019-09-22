@@ -29,10 +29,15 @@ HK.MapCtrl = () => {
       var isForward = e.scrollDirection == 'FORWARD' ? true : false
       var targets = [$('#hk-ndjili-line'),$('#hk-marker-ndjili'),$('#hk-n_djili-text'), $('#marker-casablanca'), $('#casablanca-text')]
       if (isForward){
-        TweenMax.to(targets, 0.5, visiable_opt)
+        return new TimelineMax()
+          .add(TweenMax.to([$('#hk-marker-ndjili'),$('#hk-n_djili-text')], 0.3, visiable_opt))
+          .add(TweenMax.to($('#hk-ndjili-line path'), 1, {strokeDashoffset: 0, ease:Power2.easeOut}))
+          .add(TweenMax.to([$('#marker-casablanca'), $('#casablanca-text')], 0.3, visiable_opt))
+
       } else {
         TweenMax.killTweensOf(targets)
-        TweenMax.to(targets, 0.5, hidden_opt)
+        TweenMax.to([$('#hk-marker-ndjili'),$('#hk-n_djili-text'), $('#marker-casablanca'), $('#casablanca-text')], 0.5, hidden_opt)
+        TweenMax.to($('#hk-ndjili-line path'), 0.5, {strokeDashoffset: 512.72, ease:Power2.easeOut})
       }
     })
     .addTo(controller);
@@ -42,10 +47,13 @@ HK.MapCtrl = () => {
       var isForward = e.scrollDirection == 'FORWARD' ? true : false
       var targets = [$('#casablanca-line'),$('#hamad-text'),$('#marker-hamad')]
       if (isForward){
-        TweenMax.to(targets, 0.5, visiable_opt)
+        return new TimelineMax()
+          .add(TweenMax.to($('#casablanca-line path'), 1, {strokeDashoffset: 1310.86, ease:Power2.easeOut}))
+          .add(TweenMax.to([$('#hamad-text'),$('#marker-hamad')], 0.3, visiable_opt))
       } else {
         TweenMax.killTweensOf(targets)
-        TweenMax.to(targets, 0.5, hidden_opt)
+        TweenMax.to([$('#hamad-text'),$('#marker-hamad')], 0.5, hidden_opt)
+        TweenMax.to($('#casablanca-line path'), 0.5, {strokeDashoffset: 655.43, ease:Power2.easeOut})
       }
     })
     .addTo(controller);
@@ -55,21 +63,22 @@ HK.MapCtrl = () => {
       var isForward = e.scrollDirection == 'FORWARD' ? true : false
       var targets = [$('#hamad-line'),$('#HK-text'),$('#marker-HK')]
       if (isForward){
-        $('#hk-text-static').style.display = 'none'
-        TweenMax.to(targets, 0.5, visiable_opt)
+        return new TimelineMax()
+          .add(TweenMax.to($('#hamad-line path'), 1, {strokeDashoffset: 1353.06, ease:Power2.easeOut}))
+          .add(TweenMax.to([$('#HK-text'),$('#marker-HK')], 0.3, visiable_opt))
       } else {
-        $('#hk-text-static').style.display = 'flex'
         TweenMax.killTweensOf(targets)
-        TweenMax.to(targets, 0.5, hidden_opt)
+        TweenMax.to([$('#HK-text'),$('#marker-HK')], 0.5, hidden_opt)
+        TweenMax.to($('#hamad-line path'), 0.5, {strokeDashoffset: 676.53, ease:Power2.easeOut})
       }
     })
     .addTo(controller);
 
   var forth_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (3*duration_per-navOffset), reverse: true})
     .on('start', (e) =>{
-      var isForward = e.scrollDirection == 'FORWARD' ? true : false
       switchByDirD(e, map, 'assets/maps/HK/desktop/map-01.jpg', 'assets/maps/HK/desktop/map-02.jpg')
 
+      var isForward = e.scrollDirection == 'FORWARD' ? true : false
       var part_one_targets = [$('#hk-ndjili-line'),$('#hk-marker-ndjili'),$('#hk-n_djili-text'), $('#marker-casablanca'), $('#casablanca-text'), $('#casablanca-line'),$('#hamad-text'),$('#marker-hamad'), $('#hamad-line'),$('#HK-text'),$('#marker-HK')]
       var targets = [
         $('#hk-line'),
@@ -77,13 +86,17 @@ HK.MapCtrl = () => {
         $('#HK-text-2'),
       ]
       if (isForward){
+        $('#hk-text-static').style.display = 'none'
         return new TimelineMax()
-        .add(TweenMax.to(part_one_targets, 0.5, hidden_opt))
-        .add(TweenMax.to(targets, 0.5, visiable_opt))
+          .add(TweenMax.to(part_one_targets, 0.5, hidden_opt))
+          .add(TweenMax.to($('#hk-line path'), 1, {strokeDashoffset: 2320.86, ease:Power2.easeOut}))
+          .add(TweenMax.to([$('#marker-HK-2'),$('#HK-text-2')], 0.5, visiable_opt))
       } else {
+        $('#hk-text-static').style.display = 'flex'
         TweenMax.to(part_one_targets, 0.5, visiable_opt)
         TweenMax.killTweensOf(targets)
-        TweenMax.to(targets, 0.5, hidden_opt)
+        TweenMax.to([$('#marker-HK-2'),$('#HK-text-2')], 0.5, hidden_opt)
+        TweenMax.to($('#hk-line path'), 1, {strokeDashoffset: 1160.43, ease:Power2.easeOut})
       }
     })
     .addTo(controller);
