@@ -56,7 +56,7 @@ Cameroon.MapCtrl1 = () => {
     .addTo(controller);
 
   var second_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (duration_per-navOffset), reverse: true})
-    .on('enter', () =>
+		.on('enter', () =>
       new TimelineMax()
 				.add(TweenMax.to($('#cam-arrow7'), 0.5, visiable_opt))
         .add(TweenMax.to($('#marker-douala'), 0.5, visiable_opt))

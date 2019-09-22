@@ -5,6 +5,7 @@ import './style/progress-bar.css'
 import './style/overlay.css'
 
 import ProgressBar from './modules/progress-bar.js'
+import Navbar from './modules/navbar.js'
 import Hash from './modules/url-hash.js'
 import Subscribe from './modules/subscribe.js'
 import SeizureMap from './modules/seizure-map.js'
@@ -14,10 +15,14 @@ window.addEventListener('DOMContentLoaded', () => {
 	//init
 	var isDesktopPrev = window.matchMedia("(min-device-width: 480px)").matches
 	loadHeaderVideo(isDesktopPrev)
-	
+
 	var audioCtrl = ProgressBar.ctrlHeaderAudio()
 	var progressCtrl = ProgressBar.initScrollController()
 	ProgressBar.initClickNav()
+
+	Navbar.titleChangeD()
+
+	Navbar.countryControllerD()
 
 	Hash.initHashController()
 
@@ -30,13 +35,13 @@ window.addEventListener('DOMContentLoaded', () => {
 	//window resize:
 	window.onresize = function(){
 	  var isDesktop = window.matchMedia("(min-device-width: 480px)").matches
-	  // device change 
+	  // device change
 	  if (isDesktop != isDesktopPrev){
 	  	console.log('device changed')
 	    loadHeaderVideo(isDesktop)
 	    isDesktopPrev = isDesktop
 
-	    //swtich routes ctrl
+	    //switch routes ctrl
 	    ctrls_prev.forEach(ctrl=>{ ctrl.destroy(true) }) //destroy ctrls, reset scenes
 			RoutesCtrl.init(isDesktop)
 	  }
@@ -46,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	  //reset scroll bar progress
 	  progressCtrl.destroy(true)
 	  progressCtrl =  ProgressBar.initScrollController()
-	}	
+	}
 });
 
 function loadHeaderVideo(isDesktop){

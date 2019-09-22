@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'open sans bold';
+  src: url('assets/open-sans-800.woff') format('woff');
+}
+
 body {
 	margin: 0px;
 	width: 100vw;
@@ -34,6 +39,7 @@ body {
 .serif {
 	/*title serif font */
 	font-family: 'ZCOOL XiaoWei', serif;
+	display: none;
 }
 
 .white {
@@ -171,6 +177,8 @@ a:hover {
 }
 
 
+
+
 .icon {
 	width: 35px;
 	height: 100%;
@@ -200,10 +208,29 @@ a:hover {
 
 /*content styles*/
 .chapter-title{
+	text-align: center;
+	margin: 0 5vw;
+}
+
+.chapter-title h3{
 	font-family: 'ZCOOL XiaoWei', serif;
 	font-size: 20px;
 	color: #3b3b3b;
 	text-align: center;
+	padding-bottom: 1vh;
+	border-bottom: #dcba7d 1px solid;
+	margin: 0 5vw;
+	font-style: 100;
+}
+
+.chapter-title h3 span{
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
+  line-height: 1.37;
+  text-align: center;
+  color: #dcba7d;
+	text-transform: uppercase;
 }
 
 .byline{
