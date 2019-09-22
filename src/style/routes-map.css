@@ -103,7 +103,9 @@
 }
 
 /*specific cases*/
-
+.routes-map-mobile-hidden{
+	display: none;
+}
 
 /* Desktop */
 @media only screen and (min-device-width: 480px) {
@@ -174,7 +176,7 @@
 		margin: 0 !important;
 	}
 
-	#indonesia-text-mobile{
+	#indonesia-text-mobile, #nepal-text-mobile, .routes-map-desktop-hidden{
 		display: none;		
 	}
 }

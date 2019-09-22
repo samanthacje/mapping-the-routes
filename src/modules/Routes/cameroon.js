@@ -42,11 +42,11 @@ Cameroon.MapCtrl1 = () => {
   var first_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (-navOffset), reverse: true})
     .on('enter', () =>
       new TimelineMax()
-        .add(TweenMax.to($('#bertoua-text'), 0.5, visiable_opt))
-        .add(TweenMax.to($('#abong-text'), 0.5, visiable_opt))
-        .add(TweenMax.to($('#mindourou-text'), 0.5, visiable_opt))
-        .add(TweenMax.to($('#lomie-text'), 0.5, visiable_opt))
-        .add(TweenMax.to($('#djoum-text'), 0.5, visiable_opt))
+        .add(TweenMax.to($('#bertoua-text'), 0.25, visiable_opt))
+        .add(TweenMax.to($('#abong-text'), 0.25, visiable_opt))
+        .add(TweenMax.to($('#mindourou-text'), 0.25, visiable_opt))
+        .add(TweenMax.to($('#lomie-text'), 0.25, visiable_opt))
+        .add(TweenMax.to($('#djoum-text'), 0.25, visiable_opt))
     )
     .on('leave', () => {
       var targets = [$('#bertoua-text'), $('#abong-text'),$('#mindourou-text'), $('#lomie-text'),$('#djoum-text')]
@@ -58,45 +58,44 @@ Cameroon.MapCtrl1 = () => {
   var second_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (duration_per-navOffset), reverse: true})
     .on('enter', () =>
       new TimelineMax()
-        .add(TweenMax.to($('#arrow6'), 0.5, visiable_opt))
-        .add(TweenMax.to($('#arrow7'), 0.5, visiable_opt))
+        .add(TweenMax.to($('#cam-arrow6'), 0.5, visiable_opt))
+        .add(TweenMax.to($('#cam-arrow7'), 0.5, visiable_opt))
         .add(TweenMax.to($('#marker-douala'), 0.5, visiable_opt))
         .add(TweenMax.to($('#marker-yaounde'), 0.5, visiable_opt))
         .add(TweenMax.to($('#yaounde-text'), 0.5, visiable_opt))
         .add(TweenMax.to($('#douala-text'), 0.5, visiable_opt))
-        .addCallback(()=>{
-          pulseMarker([
-            $('#marker-douala'),
-            $('#marker-yaounde'),
-          ])
-        }, 0.7)
+        // .addCallback(()=>{
+        //   pulseMarker([
+        //     $('#marker-douala'),
+        //     $('#marker-yaounde'),
+        //   ])
+        // }, 0.7)
     )
     .on('leave', () => {
-      var targets = [$('#arrow6'), $('#arrow7'),$('#marker-douala'), $('#marker-yaounde'),$('#yaounde-text'), $('#douala-text')]
+      var targets = [$('#cam-arrow6'), $('#cam-arrow7'),$('#marker-douala'), $('#marker-yaounde'),$('#yaounde-text'), $('#douala-text')]
       TweenMax.killTweensOf(targets)
       TweenMax.to(targets, 0.5, hidden_opt)
     })
     .addTo(controller);
 
+  var thrid_scene_targets = [$('#marker-yairport'), $('#marker-dairport'),$('#cam-arrow1'),$('#cam-arrow2'),$('#cam-arrow3'),$('#cam-arrow4'),$('#cam-arrow5'),$('#yairport-text'),$('#dairport-txt')]
   var thrid_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (2 * duration_per-navOffset), reverse: true})
-    .setTween(
-      new TimelineMax()
-      .add(TweenMax.to($('#marker-yairport'), 0.5, visiable_opt))
-      .add(TweenMax.to($('#marker-dairport'), 0.5, visiable_opt))
-      .add(TweenMax.to($('#arrow1'), 0.5, visiable_opt))
-      .add(TweenMax.to($('#arrow2'), 0.5, visiable_opt))
-      .add(TweenMax.to($('#arrow3'), 0.5, visiable_opt))
-      .add(TweenMax.to($('#arrow4'), 0.5, visiable_opt))
-      .add(TweenMax.to($('#arrow5'), 0.5, visiable_opt))
-      .add(TweenMax.to($('#yairport-text'), 0.5, visiable_opt))
-      .add(TweenMax.to($('#dairport-txt'), 0.5, visiable_opt))
-      .addCallback(()=>{
-        pulseMarker([
-          $('#marker-yairport'),
-          $('#marker-dairport'),
-        ])
-      }, 0.7)
-    )
+    .on('start', (e) => {
+      var isForward = e.scrollDirection == 'FORWARD' ? true : false
+      if (isForward){
+        return new TimelineMax()
+          .add(TweenMax.to(thrid_scene_targets, 0.5, visiable_opt))
+          // .addCallback(()=>{
+          //   pulseMarker([
+          //     $('#marker-yairport'),
+          //     $('#marker-dairport'),
+          //   ])
+          // }, 0.7)
+      } else {
+        TweenMax.killTweensOf(thrid_scene_targets)
+        TweenMax.to(thrid_scene_targets, 0.5, hidden_opt)
+      }
+    })
     .addTo(controller);
 
     return controller
@@ -118,11 +117,11 @@ Cameroon.MapCtrlM1 = () => {
   var duration_per = pin_scene.duration() / 3
   //first scene trigger inmediately on map pin, use onLeave triggerHook
   var second_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (duration_per-navOffset), reverse: true})
-    .on('start', (e) => { switchByDir(e, map, Cameroon.pics_m[1], Cameroon.pics_m[0]) })
+    .on('start', (e) => { switchByDir(e, map, Cameroon.pics_m[0], Cameroon.pics_m[1]) })
     .addTo(controller);
 
   var thrid_scene = new ScrollMagic.Scene({ triggerElement: map, triggerHook:'onLeave', duration: duration_per, offset: (2*duration_per-navOffset), reverse: true})
-    .on('start', (e) => { switchByDir(e, map, Cameroon.pics_m[2], Cameroon.pics_m[1]) })
+    .on('start', (e) => { switchByDir(e, map, Cameroon.pics_m[1], Cameroon.pics_m[2]) })
     .addTo(controller);
 
   return controller
