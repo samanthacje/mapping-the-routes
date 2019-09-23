@@ -141,10 +141,8 @@ a:hover {
 	padding-bottom: 20vh;
 }
 
-.header-title{
-	font-size: 3.8em;
-	font-family: 'ZCOOL XiaoWei', serif;
-	color: #fff
+.header-title img{
+	width: 85vw;
 }
 
 .header-intro{
@@ -200,6 +198,21 @@ a:hover {
 	justify-content: space-around;
 	font-size: 15px;
 	line-height: 12px;
+}
+
+.country-list
+{
+  display: none;
+}
+
+.country-list li
+{
+
+}
+
+.country-list .active
+{
+
 }
 
 
@@ -275,16 +288,10 @@ a:hover {
 }
 
 .bookmark{
-	position: absolute;
-	right:0;
-	bottom: 1vh;
-	width: 20px;
-	height: 30px;
-	display: flex;
-	justify-content: center;
+  width: 8%;
+	display: block;
 	align-items: center;
-	background-image: url(assets/images/bookmark.svg);
-	background-repeat: no-repeat;
+  margin: 0 46%;
 }
 
 .footer{
