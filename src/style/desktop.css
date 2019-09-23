@@ -47,7 +47,7 @@
 
 	.header-button
 	{
-		margin-top: 4vh;
+		margin-top: 2.5vh;
 	}
 
 	.nav {
@@ -57,18 +57,21 @@
 
 	.country-list
 	{
-		color: white;
+		color: gray;
 		display: none;
+		font-family: 'open sans bold';
+		text-transform: uppercase;
 	}
 
 	.country-list li
 	{
 		display: inline-block;
+		margin: 0 0.2vw;
 	}
 
 	.country-list .active
 	{
-		color: #dcba7d;
+		color: #ffffff;
 	}
 
 	#progress-div{
