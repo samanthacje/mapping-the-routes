@@ -151,6 +151,8 @@
 	{
 		margin-top: 10vh;
 		text-align: center;
+		border-top: #dcba7d solid 1px;
+		padding-top: 5vh;
 	}
 
 	.credits h2
