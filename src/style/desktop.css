@@ -80,7 +80,6 @@
 
 	.chapter-title{
 		text-align: center;
-		margin: 0 10vw;
 	}
 
   .footer{
@@ -99,6 +98,33 @@
   	top: 0;
   	left: 100%;
   }
+
+	.img-cluster
+	{
+		position: relative;
+		width: 110%;
+		right: 5%;
+	}
+
+	.float-left
+	{
+		margin-bottom: 10px;
+		width: 60%;
+	}
+
+	.float-right
+	{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 39%
+
+	}
+
+	.img-cluster .caption
+	{
+		margin: 0 5%;
+	}
 
   #geo-map-container{
   	width: 70vw;
