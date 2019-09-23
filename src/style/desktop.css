@@ -64,12 +64,13 @@
 		display: none;
 		font-family: 'open sans bold';
 		text-transform: uppercase;
+		font-size: 0.7vw;
 	}
 
 	.country-list li
 	{
 		display: inline-block;
-		margin: 0 0.2vw;
+		margin: 0 0.3vw;
 	}
 
 	.country-list .active
