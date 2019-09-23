@@ -215,6 +215,15 @@ a:hover {
 
 }
 
+.num
+{
+  background-color: #fc7a00 !important;
+  color: white !important;
+  font-style: normal !important;
+  border-radius: 15px;
+  padding: 0.5px 6px;
+  font-family: open sans bold;
+}
 
 .icon {
 	width: 35px;
