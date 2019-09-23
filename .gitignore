@@ -71,3 +71,5 @@ cpanel/
 
 #raw pictures
 src/public/assets/images/Edited/
+
+*.DS_Store
