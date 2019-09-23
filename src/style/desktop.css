@@ -146,4 +146,68 @@
   	width: 70vw;
 		margin: 15px -10vw;
 	}
+
+	.credits
+	{
+		margin-top: 10vh;
+		text-align: center;
+	}
+
+	.credits h2
+	{
+		font-family: Open Sans bold;
+
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.37;
+  letter-spacing: normal;
+  text-align: center;
+  color: #dcba7d;
+	text-transform: uppercase;
+	}
+
+	.credits h3
+	{
+		font-family: Open Sans bold;
+		text-transform: uppercase;
+  	font-weight: 800;
+		line-height: 1;
+		font-size: 15px;
+		margin-bottom: 0;
+	}
+
+	.credits li
+	{
+		font-size: 13px;
+	}
+
+	.names {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 100%;
+
+	width: 70vw;
+	margin: 0 0 0 -10vw;
+	}
+
+	.names .col
+	{
+		text-align: center;
+
+	}
+
+	.credits li
+	{
+			list-style: none;
+	}
+
+
+	.credits ul
+	{
+			padding: 0;
+			margin-bottom: 3.5vh;
+			margin-top: 5px;
+	}
+
 }
