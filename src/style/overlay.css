@@ -18,24 +18,35 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
 	height: auto;
+
+	width: 40vw;
+	background-color: #fff;
+	padding: 10vh 10vw;
 }
 
 #overlay input[type="email"]{
 	display: inherit;
 	width: 80%;
-	max-width: 300px;
+	height: 5vh;
+	padding: 0 1vw;
+	max-width: 550px;
 	line-height: 25px;
-	border-radius: 5px;
+	background-color: #eaeaea;
+	border: none;
 	z-index: 1000;
 }
 
 #overlay button{
 	display: inherit;
-	background: #fff;
-	margin: 20px; 
-	border-radius: 5px;
+	color: #fff;
+	padding: 2vh 2.5vw;
+	margin: 20px;
+	font-weight: bold;
+	letter-spacing: 3.8px;
+	text-transform: uppercase;
+	border: solid 1px #3b3b3b;
+  background-color: #3b3b3b;
 	z-index: 1000;
 }
 

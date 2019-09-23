@@ -231,7 +231,7 @@ a:hover {
 
 .chapter-title{
 	text-align: center;
-	margin: 0 5vw;
+  width: 100%;
 }
 
 .chapter-title h3{
@@ -241,8 +241,7 @@ a:hover {
 	text-align: center;
 	padding-bottom: 1vh;
 	border-bottom: #dcba7d 1px solid;
-	margin: 0 5vw;
-	font-style: 300;
+	font-style: 100;
 }
 
 .chapter-title h3 span{
@@ -328,6 +327,22 @@ a:hover {
 /*content styles*/
 
 /*component*/
+
+.img-cluster
+{
+
+}
+
+.float-left
+{
+
+}
+
+.float-right
+{
+
+}
+
 .quote{
 	position: relative;
   margin:0 40px;
