@@ -19,10 +19,13 @@
 		margin: 5% 0 0 50%;
 	}
 
-	.header-title div{
-		font-size: 7vw;
-		line-height: 0.85;
-	}
+	.header-title {
+	padding-left: 0;
+}
+
+.header-title img {
+	width: 40vw;
+}
 
 	.header-intro{
 		margin-bottom: 2vh;
@@ -81,6 +84,17 @@
 	.chapter-title{
 		text-align: center;
 	}
+
+	.bookmark{
+		position: absolute;
+		right: 0;
+		bottom: 1vh;
+		width: 20px;
+		height: 30px;
+		margin: 0;
+	}
+
+
 
   .footer{
   	flex-direction: row;
