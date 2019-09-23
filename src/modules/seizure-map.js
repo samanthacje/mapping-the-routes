@@ -53,7 +53,7 @@ var path = d3.geoPath().projection(projection);
 var title = svg.append("text")
 	    .attr("class", "vis-title")
 	    .attr("transform", "translate(" + 650 + "," + 140 + ")")
-      .text('pangolins trafficked')
+      .text('pangolins seized')
 
 var range = title.append('tspan').attr('x', 0).attr('dy', '1.3em')
 	    .text("(select a time range)");
@@ -292,7 +292,7 @@ function updateTitleText(newDateArray, filteredData) {
         var from = formatDatetime(newDateArray[0]),
             to =   formatDatetime(newDateArray[1])
                    
-        range.text(from + " ~ " + to);
+        range.text(from + " - " + to);
     }
     //update count
     var total = filteredData.map(d=>+d.ESTNUM).reduce((acc, cur)=>acc+cur, 0)
@@ -384,7 +384,8 @@ function updateMapPointsAutoPlay(data, year) {
 };
 
 function formatDatetime(date){
-  return date.getFullYear() + "-" +(date.getMonth() + 1)+ "-" +date.getDate()
+  return d3.timeFormat("%d %b %Y")(date)
+  // return date.getFullYear() + "-" +(date.getMonth() + 1)+ "-" +date.getDate()
 }
 /*
 function initAutoPlayCtrl(data) {
