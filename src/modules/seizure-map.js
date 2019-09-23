@@ -254,6 +254,20 @@ function makeTimeline(dataForMap, dataForTimeline) {
   bursh_g
       .call(brush)
     	 .call(brush.move, initial_range)
+
+  var ticks = timeline.selectAll('.axis .tick')
+  ticks.on('click', function(d){
+    var year = +d3.select(this).select('text').text()
+    var valid = (!isNaN(year)) && year > 2000 && year < 2020
+    if (valid) {
+      if (year == 2019){
+        bursh_g.call(brush.move, [new Date(2019, 0, 1), x.domain()[1]].map(x))
+      } else{
+        bursh_g.call(brush.move, [new Date(year, 0, 1), new Date(year+1, 0, 1)].map(x))
+      }
+    }
+  })
+
 };
 
 // Called whenever the timeline brush range (extent) is updated
