@@ -77,6 +77,10 @@ var bartip = d3.select('.container').append('div')
     .attr('class', 'bartip')
     .style('display', 'none');
 
+var div = d3.select("body").append("div") 
+    .attr("class", "d3-tooltip")       
+    .style("opacity", 0);
+
 //legend
 // var legend = svg.append('g')
 //     .attr('transform', 'translate(780, 450)').attr('id', 'seizure-map-legend')
@@ -109,7 +113,8 @@ var bartip = d3.select('.container').append('div')
 SeizureMap.renderMap = function(){
 	Promise.all([
 	    d3.json("assets/maps/world_countries.json"),
-	    d3.csv("assets/data/valid-seizure-num-date.csv")
+	    // d3.csv("assets/data/valid-seizure-num-date.csv")
+      d3.csv("assets/data/valid-seizure-num-date-tooltip.csv")
 	])
 	.then(ready)
 	.catch(err=>{
@@ -270,12 +275,8 @@ function updateTitleText(newDateArray, filteredData) {
     if (!newDateArray) {
         range.text("Pangolin seizures (select a time range)");
     } else {
-        var from = newDateArray[0].getFullYear() + "-" +
-                    (newDateArray[0].getMonth() + 1)+ "-" +
-                   (newDateArray[0].getDate()) ,
-            to =   newDateArray[1].getFullYear() + "-" +
-                   (newDateArray[1].getMonth() + 1) + "-" +
-                   (newDateArray[1].getDate()) 
+        var from = formatDatetime(newDateArray[0]),
+            to =   formatDatetime(newDateArray[1])
                    
         range.text(from + " ~ " + to);
     }
@@ -290,11 +291,12 @@ function updateTitleText(newDateArray, filteredData) {
 
 function updateMapPoints(data){
   var circles = g_bubbles.selectAll("circle.seizure-bubble").data(data, function(d) { return d.id });
+
   circles // update existing points
       .attr("fill", "rgba(201, 62, 62, 0.3)")
       .attr("cx", function(d) { return projection([+d.Longitude, +d.Latitude])[0]; })
       .attr("cy", function(d) { return projection([+d.Longitude, +d.Latitude])[1]; })
-      .attr("r",  function(d) { return radiusScale(+d.ESTNUM); });
+      .attr("r",  function(d) { return radiusScale(+d.ESTNUM); })
 
   circles.enter().append("circle") 
       .attr('class', 'seizure-bubble')
@@ -302,10 +304,39 @@ function updateMapPoints(data){
       // .attr("fill", "rgba(240, 135, 24, 0.3)")
       .attr("cx", function(d) { return projection([+d.Longitude, +d.Latitude])[0]; })
       .attr("cy", function(d) { return projection([+d.Longitude, +d.Latitude])[1]; })
+      .on("mouseover", function(d) {
+        d3.select(this)
+          .attr('stroke-width', 0.3)
+          .attr('stroke', '#fff')
+        .transition()
+          .style('fill', 'rgb(201, 62, 62)')
+        div.transition()    
+          .duration(200)    
+          .style("opacity", .9);    
+        div.html(`
+          <div><span>Date:</span> ${formatDatetime(d.TIME)}</div>
+          <div><span>Country:</span> ${d.Country}</div>
+          <div><span># Pangolins:</span> ${d.ESTNUM}</div>
+          <div><span>Terms:</span> ${d.carcass?'carcass, ':''}${d.live?'live, ':''}${d.scale?'scales':''}</div>
+          <div><span>From:</span> ${d.Via || ' - '}</div>
+          <div><span>To:</span> ${d.OUTBOUND || ' - '}</div>
+          `)  
+          .style("left", (d3.event.pageX) + "px")   
+          .style("top", (d3.event.pageY - 28) + "px");  
+        })          
+      .on("mouseout", function(d) {
+        d3.select(this)
+          .attr('stroke-width', 0)
+        .transition()
+          .style('fill', 'rgba(201, 62, 62, 0.3)')
+        div.transition()    
+          .duration(500)    
+          .style("opacity", 0); 
+      })
       .attr("r",  0)
     .transition()
       .duration(500)
-      .attr("r",  function(d) { return radiusScale(+d.ESTNUM); });
+      .attr("r",  function(d) { return radiusScale(+d.ESTNUM); })
 
   circles.exit() // exiting points
       .attr("r",  function(d) { return radiusScale(+d.ESTNUM); })
@@ -337,6 +368,10 @@ function updateMapPointsAutoPlay(data, year) {
         .duration(500)
         .attr("fill", "rgba(201, 62, 62, 0.3)")
 };
+
+function formatDatetime(date){
+  return date.getFullYear() + "-" +(date.getMonth() + 1)+ "-" +date.getDate()
+}
 /*
 function initAutoPlayCtrl(data) {
   var controller = new ScrollMagic.Controller();

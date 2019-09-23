@@ -476,3 +476,18 @@ a:hover {
   color: white;
   pointer-events: none;
 }
+
+div.d3-tooltip{
+	position: absolute;			
+  padding: 10px 15px;
+  font: 14px 'Open Sans', sans-serif;		
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+div.d3-tooltip span{
+  color: #dcba7d;
+}
