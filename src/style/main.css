@@ -23,6 +23,11 @@ p
   color: #2c2c2c;
 }
 
+.margin
+{
+  margin: 4vh;
+}
+
 .container{
 	margin: 0 15px;
 	/*to allow fullwidth elements be shown*/
