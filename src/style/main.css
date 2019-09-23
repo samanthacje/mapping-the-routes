@@ -11,6 +11,18 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+p
+{
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2c2c2c;
+}
+
 .container{
 	margin: 0 15px;
 	/*to allow fullwidth elements be shown*/
@@ -207,6 +219,11 @@ a:hover {
 }
 
 /*content styles*/
+.chapter-anchor
+{
+  margin-top: 8vh;
+}
+
 .chapter-title{
 	text-align: center;
 	margin: 0 5vw;
@@ -214,18 +231,19 @@ a:hover {
 
 .chapter-title h3{
 	font-family: 'ZCOOL XiaoWei', serif;
-	font-size: 20px;
+	font-size: 25px;
 	color: #3b3b3b;
 	text-align: center;
 	padding-bottom: 1vh;
 	border-bottom: #dcba7d 1px solid;
 	margin: 0 5vw;
-	font-style: 100;
+	font-style: 300;
 }
 
 .chapter-title h3 span{
 	display: block;
-	font-family: 'Open Sans', sans-serif;
+	font-family: open sans bold;
+  font-size: 30px;
   font-weight: 900;
   line-height: 1.37;
   text-align: center;
@@ -307,20 +325,22 @@ a:hover {
 /*component*/
 .quote{
 	position: relative;
+  margin:0 40px;
 	top: 0;
 	left: 0;
-	width: 100%;
-	padding: 0 10px 10px 10px;
+	width: 80%;
+	padding: 0 0 10px 0;
 	border-bottom: 1px solid #dcba7d;
 	box-sizing: border-box;
   font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: normal;
-  color: #dcba7d;
+  line-height: 1.2;
+  color: #9c5e18;
 }
 
 .caption{
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;

@@ -43,7 +43,7 @@ Navbar.countryControllerD = () => {
   const country = $$('.country-list li')
 	const controller = new ScrollMagic.Controller()
 
-	anchors.forEach(anchor=> {
+	anchors.forEach((anchor, i)=> {
 		const scene = new ScrollMagic.Scene({triggerElement: anchor, duration: anchor.offsetHeight})
 											.addTo(controller)
 
