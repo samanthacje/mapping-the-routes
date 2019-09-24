@@ -38,7 +38,7 @@ Navbar.titleChangeD = ()=>{
   return controller
 }
 
-Navbar.countryControllerD = () => {
+Navbar.countryController = () => {
 	const anchors = $$('.chapter-anchor')
   const country = $$('.country-list li a')
 	const controller = new ScrollMagic.Controller()
@@ -56,5 +56,43 @@ Navbar.countryControllerD = () => {
 	})
 }
 
+
+Navbar.titleChangeM = ()=>{
+  var title = $('.serif')
+  var name = $('.white')
+  var nav = $('.country-list')
+  var appear = {opacity: 1, ease:Linear.easeNone}
+
+  var controller = new ScrollMagic.Controller();
+  // build scene
+  var scene = new ScrollMagic.Scene({triggerElement: $('.header'), triggerHook: 'onLeave', duration: $('.header').offsetHeight})
+    .on('end', function(e){
+      var dir = e.scrollDirection
+      if (dir == 'FORWARD') {
+        title.style.display = 'block'
+        name.style.display = 'none'
+        TweenMax.fromTo(title, 0.25, {opacity:0}, appear)
+
+      } else {
+        title.style.display = 'none'
+        name.style.display = 'block'
+        TweenMax.fromTo(name, 0.25, {opacity:0}, appear)
+
+      }
+    })
+    .addTo(controller)
+
+  return controller
+}
+
+Navbar.init = (isDesktop) => {
+  
+  if (isDesktop){
+    //return all controllers
+    return [Navbar.titleChangeD(), Navbar.countryController()]
+  } else {
+    return [Navbar.titleChangeM(), Navbar.countryController()]
+  }
+}
 
 export default Navbar

@@ -22,10 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	var progressCtrl = ProgressBar.initScrollController()
 	ProgressBar.initClickNav()
 
-	Navbar.titleChangeD()
-
-	Navbar.countryControllerD()
-
 	Hash.initHashController()
 
 	Subscribe.initBookmark()
@@ -34,9 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	Basics.lightbox()
 
-	Basics.dropdown()
-
 	var ctrls_prev = RoutesCtrl.init(isDesktopPrev)
+	var nav_prev = Navbar.init(isDesktopPrev)
 
 	//window resize:
 	window.onresize = function(){
@@ -49,6 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	    //switch routes ctrl
 	    ctrls_prev.forEach(ctrl=>{ ctrl.destroy(true) }) //destroy ctrls, reset scenes
+			nav_prev.forEach(ctrl=>{ nav.destroy(true) }) //destroy ctrls, reset scenes
 			RoutesCtrl.init(isDesktop)
 	  }
 	  //reset audio ctrl
