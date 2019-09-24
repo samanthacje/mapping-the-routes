@@ -139,6 +139,8 @@
 	{
 		border-bottom: 1px solid #dcba7d;
 		padding-bottom: 2vh;
+		font-size: 16px;
+		line-height: 1.5;
 	}
 
 	.routes-map-para{
@@ -149,7 +151,7 @@
 	}
 
 	.routes-map-para-icon{
-		width: 6vw
+		width: 5vw;
 	}
 
 	.routes-map-para p{
@@ -159,6 +161,8 @@
 		border-right: none;
 		border-left: none;
 		background: none;
+		font-size: 16px;
+		line-height: 1.5;
 	}
 
 	.routes-map-para p b{
@@ -193,6 +197,7 @@
 		border-right: none;
 		border-left: none;
   	border-bottom: 1px solid #dcba7d;
+
 	}
 
 	.scrollmagic-pin-spacer{

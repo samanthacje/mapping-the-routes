@@ -1,1 +1,61 @@
-<svg id="details" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1466 1080"><defs><style>.cls-1{fill:none;stroke-width:6px;stroke-dasharray:8 6;}.cls-1,.cls-6{stroke:#fc7a00;stroke-linejoin:round;}.cls-2,.cls-5{fill:#fc7a00;}.cls-3{fill:#a36a2a;}.cls-4{font-size:25px;font-family:OpenSans-ExtraBold, Open Sans;font-weight:800;}.cls-4,.cls-6{fill:#fff;}.cls-5{opacity:0.2;isolation:isolate;}.cls-6{stroke-width:4px;}</style></defs><title>HK V3 no text</title><g id="ndjili-line"><path class="cls-1" d="M329.5,831s-9-309-240-428"/><polygon class="cls-2" points="293.31 609.94 266.43 623.42 265.39 587.82 293.31 609.94"/></g><g id="hamad-line"><path class="cls-1" d="M1377.5,546s-232-147-661-59"/><polygon class="cls-2" points="1009.66 473.35 1011.35 443.33 1042.75 460.15 1009.66 473.35"/></g><g id="casablanca-line"><path class="cls-1" d="M725.5,486c-270-179-633-86-633-86"/><polygon class="cls-2" points="408.66 397.35 410.35 367.33 441.75 384.15 408.66 397.35"/></g><g id="casablanca-text"><rect class="cls-3" x="28.5" y="275.55" width="409" height="70.45"/><text class="cls-4" transform="translate(51.07 306.67)">CASABLANCA MOHAMMED V<tspan x="17.64" y="27">INTERNATIONAL AIRPORT</tspan></text></g><g id="HK-text"><rect class="cls-3" x="1172.5" y="601.55" width="249" height="100.45"/><text class="cls-4" transform="translate(1216.31 632.67)">HONG KONG<tspan x="-24.77" y="27">INTERNATIONAL</tspan><tspan x="25.1" y="54">AIRPORT</tspan></text></g><g id="marker-casablanca"><circle class="cls-5" cx="92.5" cy="402" r="40"/><circle class="cls-6" cx="92.5" cy="402" r="8.66"/></g><g id="marker-hamad"><circle class="cls-5" cx="725.5" cy="486" r="40"/><circle class="cls-6" cx="725.5" cy="486" r="8.66"/></g><g id="marker-ndjili"><circle class="cls-5" cx="329.5" cy="827" r="40"/><circle class="cls-6" cx="329.5" cy="827" r="8.66"/></g><g id="n_djili-text" data-name="n&apos;djili-text"><rect class="cls-3" x="172.29" y="852.82" width="332.22" height="68.18"/><text class="cls-4" transform="matrix(1, 0, 0, 1, 185.97, 883.94)">N&apos;DJILI INTERNATIONAL<tspan x="96.74" y="27">AIRPORT</tspan></text></g><g id="marker-HK"><circle class="cls-5" cx="1376.5" cy="547" r="40"/><circle class="cls-6" cx="1376.5" cy="547" r="8.66"/></g><g id="hamad-text"><rect class="cls-3" x="550.5" y="508.55" width="349" height="68.45"/><text class="cls-4" transform="translate(567.31 539.67)">HAMAD INTERNATIONAL<tspan x="102.1" y="27">AIRPORT</tspan></text></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="details" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1466 1080" style="enable-background:new 0 0 1466 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FC7A00;stroke-width:6;stroke-linejoin:round;}
+	.st1{fill:#A36A2A;stroke:#A36A2A;stroke-width:20;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;}
+	.st3{font-family:'OpenSans-ExtraBold';}
+	.st4{font-size:22px;}
+	.st5{opacity:0.2;fill:#FC7A00;enable-background:new    ;}
+	.st6{fill:#FFFFFF;stroke:#FC7A00;stroke-width:4;stroke-linejoin:round;}
+</style>
+<title>HK V3 no text</title>
+<g id="ndjili-line">
+	<path class="st0" d="M318.2,724.4c0,0-17.7-283.4-248.7-402.4"/>
+</g>
+<g id="hamad-line">
+	<path class="st0" d="M1342.7,435.4c0,0-208.2-118.4-637.2-30.4"/>
+</g>
+<g id="casablanca-line">
+	<path class="st0" d="M705.5,405c-270-179-633-86-633-86"/>
+</g>
+<g id="casablanca-text">
+	<rect x="44.4" y="210.3" class="st1" width="419.6" height="44"/>
+	<text transform="matrix(1 0 0 1 89.9 228.6772)" class="st2 st3 st4">CASABLANCA MOHAMMED V</text>
+	<text transform="matrix(1 0 0 1 44.42 252.3273)" class="st2 st3 st4">INTERNATIONAL AIRPORT, MOROCCO</text>
+</g>
+<g id="HK-text">
+	<rect x="1216.5" y="469.3" class="st1" width="187" height="71"/>
+	<text transform="matrix(1 0 0 1 1238.99 486.99)" class="st2 st3 st4">HONG KONG</text>
+	<text transform="matrix(1 0 0 1 1217.1899 513.39)" class="st2 st3 st4">INTERNATIONAL</text>
+	<text transform="matrix(1 0 0 1 1261.08 539.79)" class="st2 st3 st4">AIRPORT</text>
+</g>
+<g id="marker-casablanca">
+	<circle class="st5" cx="69.5" cy="322" r="40"/>
+	<circle class="st6" cx="69.5" cy="322" r="8.7"/>
+</g>
+<g id="marker-hamad">
+	<circle class="st5" cx="704.2" cy="405" r="40"/>
+	<circle class="st6" cx="704.2" cy="405" r="8.7"/>
+</g>
+<g id="marker-ndjili">
+	<circle class="st5" cx="318.2" cy="724.4" r="40"/>
+	<circle class="st6" cx="318.2" cy="724.4" r="8.7"/>
+</g>
+<g id="n_djili-text">
+	<rect x="184.8" y="761.9" class="st1" width="268.2" height="45"/>
+	<text transform="matrix(1 0 0 1 184.8 778.8361)" class="st2 st3 st4">N&apos;DJILI INTERNATIONAL</text>
+	<text transform="matrix(1 0 0 1 206.4301 805.236)" class="st2 st3 st4">AIRPORT, DR CONGO</text>
+</g>
+<g id="marker-HK">
+	<circle class="st5" cx="1342.7" cy="435.4" r="40"/>
+	<circle class="st6" cx="1342.7" cy="435.4" r="8.7"/>
+</g>
+<g id="hamad-text">
+	<polygon class="st1" points="844.5,508 566.5,506 566.5,462 844.5,464 	"/>
+	<text transform="matrix(1 0 0 1 566.23 480.67)" class="st2 st3 st4">HAMAD INTERNATIONAL</text>
+	<text transform="matrix(1 0 0 1 615.08 504.82)" class="st2 st3 st4">AIRPORT, QATAR</text>
+</g>
+</svg>
