@@ -199,6 +199,7 @@ a:hover {
 	justify-content: space-around;
 	font-size: 15px;
 	line-height: 12px;
+  position: relative;
 }
 
 .country-list
@@ -374,22 +375,6 @@ a:hover {
 /*content styles*/
 
 /*component*/
-
-.img-cluster
-{
-  display: block;
-  margin: 5vh 0;
-}
-
-.float-left
-{
-  width: 100%;
-}
-
-.float-right
-{
-  width: 100%;
-}
 
 .quote{
 	position: relative;

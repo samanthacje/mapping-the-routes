@@ -52,8 +52,34 @@
     </ul>
   </div>
   <div class="nav-right">
-    <div class="icon"><a href="https://twitter.com/pangolinreports" target="_blank"><img src="assets/images/Twitter.svg"></a></div>
-    <div class="icon"><a href="https://www.facebook.com/thepangolinreports/" target="_blank"><img src="assets/images/Facebook.svg"></a></div>
+    <div class="icon"><a href=""><img src="assets/images/drop-down.svg"></a></div>
+    <ul class="dd-menu">
+      <li>MORE STORIES FROM THE PANGOLIN REPORTS
+      <a href=""><img src="assets/images/Pangolin-report.svg"></a></li>
+      <li>Follow us
+        <ul>
+          <li><div class="icon"><a href="https://www.facebook.com/thepangolinreports/" target="_blank"><img src="assets/images/Facebook-follow.svg"></a></li>
+          <li><div class="icon"><a href="https://www.facebook.com/thepangolinreports/" target="_blank"><img src="assets/images/Twitter-follow.svg"></a></li>
+          <li><div class="icon"><a href="https://www.facebook.com/thepangolinreports/" target="_blank"><img src="assets/images/Linkedin-follow.svg"></a></li>
+        </ul>
+      </li>
+      <li>
+        <form id="bookmark-req-form" class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbz4FSswkuXYH_613p5p0_CqVq9GsQtTosRMkVIsjw/exec">
+          <p>Subscribe fo updates</p>
+          <input type="email" name="email" id="email" placeholder="Email: ">
+          <input id="honeypot" type="text" name="honeypot" value="" style="display: none;" />
+          <button id="submit-reminder">Sign Up</button>
+          <div id="submit-message"></div>
+        </form>
+      </li>
+      <li>SHARE
+        <ul>
+          <li><div class="icon"><a href="https://www.facebook.com/thepangolinreports/" target="_blank"><img src="assets/images/Facebook-share.svg"></a></li>
+          <li><div class="icon"><a href="https://www.facebook.com/thepangolinreports/" target="_blank"><img src="assets/images/Twitter-share.svg"></a></li>
+          <li><div class="icon"><a href="https://www.facebook.com/thepangolinreports/" target="_blank"><img src="assets/images/Whatsapp-share.svg"></a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </div>
 <div id="progress-div">
@@ -120,8 +146,10 @@
 
     <p>Despite the scale of the trade, little is actually known about it, even among prosecutors and law enforcement officials in its key market: China.</p>
 
-    <div id="geo-map-container"></div>
-    <p class="caption">Seizure of illegally trafficked pangolins around the world from 2000 to March 2019, based on publicly available reports. Source: Data collected by EIA</p>
+    <img src="assets/maps/global-trafficking-route.jpg" class="article-image">
+
+      <p class="caption">This map depicts the international routes used to traffic pangolins, spanning mostly within Africa and Asia. The majority of demand for pangolins is believed to be from China, where pangolins are consumed and its scales used in traditional Chinese medicine. (Data: Nepali Times)</p>
+
   </div>
 
   <div class="chapter-anchor" id="china">
@@ -142,6 +170,9 @@
     <p>Our reporters reviewed <a href="https://drive.google.com/open?id=1ewrpDoDv9JZo6aBj85l_D965HY12lfRz" target="_blank">more than 400 court decisions in criminal cases in China</a> related to the illegal trade in pangolins from 2005 to 2019. In only a few of the court cases we studied were prosecutors able or willing to retrace the smuggling routes to their origins, like Indonesia and Nigeria.</p>
 
     <p>The numbers of pangolin seizures are rising, not only in China, the primary market, but also in transit hubs such as Vietnam, Singapore and Hong Kong, according to EIA figures. Even there, the origin of the goods remains unknown for the vast majority of cases. </p>
+
+    <div id="geo-map-container"></div>
+    <p class="caption">Seizure of illegally trafficked pangolins around the world from 2000 to March 2019, based on publicly available reports. Source: Data collected by EIA</p>
 
     <p>Breeding and keeping pangolins has proved difficult. China has an intransparent system that allows for the continued consumption of pangolin stockpiles for TCM. Due to the high demand and limited regulatory oversight, many suppliers rely on cheaper, illegal imports.</p>
 
@@ -172,15 +203,18 @@
 
     <p>“TCM professionals need to speak up to defend the good name of the Chinese medicine,” said Dr Lao, who speaks regularly at international conferences to advocate replacing animal ingredients in TCM with plant-based substitutes. </p>
 
-    <div class="img-cluster">
-    <img class="float-left" src="assets/images/compressed/CHINA Pangolin scales for sale at a pharmacy selling Traditional Chinese Medicine in Shantou2.jpg">
+  <div class="row center">
+    <img class="article-image-v" src="assets/images/compressed/CHINA Pangolin scales for sale at a pharmacy selling Traditional Chinese Medicine in Shantou2.jpg">
 
-    <img class="float-left" src="assets/images/compressed/CHINA Pangolin scales for sale at a pharmacy selling Traditional Chinese Medicine in Shantou.jpg">
-
-    <img class="float-right" src="assets/images/compressed/CHINA In another pharmacy in Guangdong.png">
-
-    <p class="caption">Pangolin scales for sale at a pharmacy in Shantou, Guangdong Province. These scales were kept in an unmarked plastic bag hidden from the counter, sold for 6 renminbi per gram – that’s less than $1. The worker told our undercover journalist that pangolin scales are good for reducing swelling and promoting lactation. </p>
+    <img class="article-image-v" src="assets/images/compressed/CHINA Pangolin scales for sale at a pharmacy selling Traditional Chinese Medicine in Shantou.jpg">
   </div>
+    <p class="caption">Pangolin scales for sale at a pharmacy in Shantou, Guangdong Province. These scales were kept in an unmarked plastic bag hidden from the counter, sold for 6 renminbi per gram – that’s less than $1. The worker told our undercover journalist that pangolin scales are good for reducing swelling and promoting lactation. </p>
+
+<div class="row center">
+    <img class="article-image-v" src="assets/images/compressed/CHINA In another pharmacy in Guangdong.png">
+</div>
+
+    <p class="caption">In another pharmacy in Shantou, pangolin scales are sold for more than 7,000 renminbi, or $990, per kilogram. This pack contains 5 grams, and is marked with a sticker from China’s Wildlife Special Mark Centre, signifying that it is a legally sold product.</p>
 
     <p>In another pharmacy in Shantou, pangolin scales are sold for more than 7,000 renminbi, or $990, per kilogram. This pack contains 5 grams, and is marked with a sticker from China’s Wildlife Special Mark Centre, signifying that it is a legally sold product. </p>
 
@@ -345,7 +379,7 @@
   <div class="chapter-anchor" id="malaysia">
     <div class="chapter-title">
       <svg viewbox="0 0 14.389 18.5" class="bookmark"><use xlink:href="#bookmark_icon" />
-      <h3><span>Malaysia</span>Rising demand reaches into rainforests, indigenous hunters say</h3>
+      <h3><span>Malaysia</span>Rising demand reaches into rainforests,<br>indigenous hunters say</h3>
     </div>
     <div class="byline">
     </div>
@@ -588,7 +622,7 @@
   <div class="chapter-anchor" id="indonesia">
     <div class="chapter-title">
       <svg viewbox="0 0 14.389 18.5" class="bookmark"><use xlink:href="#bookmark_icon" />
-      <h3><span>Indonesia</span>Cash transfers suggest sophisticated criminal network</h3>
+      <h3><span>Indonesia</span>Cash transfers suggest<br>sophisticated criminal network</h3>
     </div>
     <div class="byline">
     </div>
@@ -798,7 +832,7 @@
   <div class="chapter-anchor" id="india-myanmar-border">
     <div class="chapter-title">
       <svg viewbox="0 0 14.389 18.5" class="bookmark"><use xlink:href="#bookmark_icon" />
-      <h3><span>India-Myanmar border</span>Smuggling, linked to other crimes, finances militancy</h3>
+      <h3><span>India-Myanmar border</span>Smuggling, linked to other crimes,<br>finances militancy</h3>
     </div>
 
     <div class="byline">
