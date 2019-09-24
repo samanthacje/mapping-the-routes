@@ -3,7 +3,9 @@ import './style/desktop.css'
 import './style/routes-map.css'
 import './style/progress-bar.css'
 import './style/overlay.css'
+import './style/lightbox.css'
 
+import Basics from './modules/basics.js'
 import ProgressBar from './modules/progress-bar.js'
 import Navbar from './modules/navbar.js'
 import Hash from './modules/url-hash.js'
@@ -29,6 +31,8 @@ window.addEventListener('DOMContentLoaded', () => {
 	Subscribe.initBookmark()
 
 	SeizureMap.renderMap()
+
+	Basics.lightbox()
 
 	var ctrls_prev = RoutesCtrl.init(isDesktopPrev)
 

@@ -40,7 +40,7 @@ Navbar.titleChangeD = ()=>{
 
 Navbar.countryControllerD = () => {
 	const anchors = $$('.chapter-anchor')
-  const country = $$('.country-list li')
+  const country = $$('.country-list li a')
 	const controller = new ScrollMagic.Controller()
 
 	anchors.forEach((anchor, i)=> {
