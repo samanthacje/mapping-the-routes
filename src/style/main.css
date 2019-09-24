@@ -203,17 +203,35 @@ a:hover {
 
 .country-list
 {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 20px;
+  right: 0;
+  background-color: #dcba7d;
+
+  color: #3b3b3b;
   display: none;
+  font-family: 'open sans bold';
+  text-transform: uppercase;
+  font-size: 2vh;
+  text-align: left;
+  padding: 3vh 15vw;
+  box-sizing: border-box;
+
 }
 
 .country-list li
 {
-
+  margin: 4vh 0;
+  list-style: none;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .country-list .active
 {
-
+  color: #9c5e18;
 }
 
 .num
@@ -478,9 +496,9 @@ a:hover {
 }
 
 div.d3-tooltip{
-	position: absolute;			
+	position: absolute;
   padding: 10px 15px;
-  font: 14px 'Open Sans', sans-serif;		
+  font: 14px 'Open Sans', sans-serif;
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
   border: none;
