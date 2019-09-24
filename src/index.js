@@ -34,6 +34,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	Basics.lightbox()
 
+	Basics.dropdown()
+
 	var ctrls_prev = RoutesCtrl.init(isDesktopPrev)
 
 	//window resize:

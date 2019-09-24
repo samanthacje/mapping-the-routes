@@ -24,4 +24,16 @@ const Basics = function(){}
     }
 
 
+    Basics.dropdown = ()=>{
+
+      const handler = event => {
+        $("#dd-menu").classList.toggle("show")
+      }
+      //add listener for click
+      $("dropbtn").addEventListener('click', handler)
+      //add listener for touch
+      $("dropbtn").addEventListener('touchend', handler)
+
+      }
+
   export default Basics
