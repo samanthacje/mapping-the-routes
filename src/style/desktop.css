@@ -98,8 +98,70 @@
 		background-color: #dcba7d;
 		margin: 0 -30px 0 0;
 		padding: 5vh 3vw;
+
+		font-family: open sans bold;
+		text-transform: uppercase;
+		color: #3b3b3b;
+		line-height: 1.25;
 	}
 
+.dd-menu li
+{
+	padding: 0;
+	list-style: none;
+	margin: 5vh 0;
+}
+
+.dd-menu li img, .dd-menu li ul, .dd-menu li form
+{
+	margin-top: 1vh;
+}
+
+.dd-menu input[type="email"]{
+	display: inherit;
+	background-color: #eaeaea;
+	border: none;
+	z-index: 1000;
+
+	width: 100%;
+	height: 5vh;
+	padding: 0 1vw;
+	line-height: 25px;
+	margin-bottom: 1vh;
+	box-sizing: border-box;
+}
+
+.dd-menu button{
+
+	color: #dcba7d;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	border: solid 2px #3b3b3b;
+  background-color: #3b3b3b;
+	z-index: 1000;
+	cursor: pointer;
+
+	width: 100%;
+	padding: 1.8vh 0;
+}
+
+.dd-menu #submit-message{
+	display: inherit;
+	font-size: 10px;
+	color: red;
+}
+
+.menu-logo
+{
+	padding: 0;
+}
+
+.menu-logo li
+{
+	display: inline-block;
+	margin: 0 1.5vw 0 0;
+}
 
 
 	#progress-div{
