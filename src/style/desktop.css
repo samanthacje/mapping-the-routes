@@ -81,6 +81,12 @@
 		margin: 0 0.5vw;
 	}
 
+	.country-list li a
+	{
+		color: gray;
+		font-size: 0.8vw;
+	}
+
 	.country-list .active
 	{
 		color: #ffffff;
