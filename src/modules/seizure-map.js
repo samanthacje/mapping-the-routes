@@ -159,7 +159,10 @@ SeizureMap.renderMap = function(){
 	    .data(world.features)
 	    .enter().append("path")
 	      .attr("d", path)
-	      .style("fill", '#694b2d')
+	      .style("fill", '#9C5E18')
+        .attr("stroke", "#3B3B3B")
+        .attr("stroke-width", 1)
+        .style("opacity", 0.5)
 	}
 }
 
