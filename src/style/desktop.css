@@ -133,7 +133,27 @@
 		margin: 0;
 	}
 
+	.img-cluster
+	{
+	position: relative;
+	width: 135%;
+	right: 15%;
+	}
 
+	.float-left
+	{
+	margin-bottom: 10px;
+	width: 60%;
+	}
+
+	.float-right
+	{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 39%
+
+	}
 
   .footer{
   	flex-direction: row;
