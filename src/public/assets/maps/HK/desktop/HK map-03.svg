@@ -1,1 +1,40 @@
-<svg id="details" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1466 1080"><defs><style>.cls-1,.cls-8{fill:#fc7a00;}.cls-1{opacity:0.2;isolation:isolate;}.cls-2,.cls-4,.cls-9{fill:#fff;}.cls-2,.cls-9{stroke:#fc7a00;stroke-linejoin:round;}.cls-2{stroke-width:4px;}.cls-3{fill:#a36a2a;}.cls-4{font-size:25px;font-family:OpenSans-ExtraBold, Open Sans;font-weight:800;}.cls-5{opacity:0.5;}.cls-6{fill:none;stroke:#3b3b3b;stroke-miterlimit:10;stroke-dasharray:8 6;}.cls-6,.cls-9{stroke-width:6px;}.cls-7{fill:#3b3b3b;}.cls-8{opacity:0.2;}</style></defs><title>HK V3 no text</title><g id="marker-HK"><circle class="cls-1" cx="1119" cy="345" r="40"/><circle class="cls-2" cx="1119" cy="345" r="8.66"/></g><g id="HK-text"><rect class="cls-3" x="995" y="400.55" width="249" height="100.45"/><text class="cls-4" transform="translate(1038.81 431.67)">HONG KONG<tspan x="-24.77" y="27">INTERNATIONAL</tspan><tspan x="25.1" y="54">AIRPORT</tspan></text></g><g id="macau-line" class="cls-5"><line class="cls-6" x1="1111" y1="346" x2="288" y2="513"/><polygon class="cls-7" points="717.45 411.5 722.63 441.12 688.56 431.81 717.45 411.5"/></g><g id="marker-macau"><circle class="cls-8" cx="282" cy="513" r="55.68"/><circle class="cls-9" cx="282" cy="513" r="12.06"/></g><rect class="cls-3" x="174" y="553.55" width="221" height="73.45"/><text class="cls-4" transform="translate(194.63 584.67)">MACAU FERRY<tspan x="14.88" y="27">ATERMINAL</tspan></text></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="details" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1466 1080" style="enable-background:new 0 0 1466 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.2;fill:#FC7A00;enable-background:new    ;}
+	.st1{fill:#FFFFFF;stroke:#FC7A00;stroke-width:4;stroke-linejoin:round;}
+	.st2{opacity:0.5;}
+	.st3{fill:none;stroke:#3B3B3B;stroke-width:6;stroke-miterlimit:10;}
+	.st4{fill:#3B3B3B;}
+	.st5{fill:#A36A2A;stroke:#A36A2A;stroke-width:20;stroke-miterlimit:10;}
+	.st6{fill:#FFFFFF;}
+	.st7{font-family:'OpenSans-ExtraBold';}
+	.st8{font-size:22px;}
+</style>
+<title>HK V3 no text</title>
+<g id="marker-HK">
+	<circle class="st0" cx="1119" cy="345" r="40"/>
+	<circle class="st1" cx="1119" cy="345" r="8.7"/>
+</g>
+<g id="macau-line" class="st2">
+	<line class="st3" x1="1111" y1="346" x2="215.2" y2="740.6"/>
+	<polygon class="st4" points="667.3,522.7 680.8,549.6 645.5,550.5 	"/>
+</g>
+<g id="ndjili-text">
+	<rect x="145.7" y="780.6" class="st5" width="157" height="42"/>
+	<text transform="matrix(1 0 0 1 145.083 796.2522)" class="st6 st7 st8">MACAU FERRY</text>
+	<text transform="matrix(1 0 0 1 166.163 822.6522)" class="st6 st7 st8">TERMINAL</text>
+</g>
+<g id="HK-text">
+	<rect x="1027" y="403" class="st5" width="187" height="71"/>
+	<text transform="matrix(1 0 0 1 1049.49 420.67)" class="st6 st7 st8">HONG KONG</text>
+	<text transform="matrix(1 0 0 1 1027.6899 447.07)" class="st6 st7 st8">INTERNATIONAL</text>
+	<text transform="matrix(1 0 0 1 1071.58 473.47)" class="st6 st7 st8">AIRPORT</text>
+</g>
+<g id="marker-HK-2">
+	<circle class="st0" cx="223.9" cy="740.6" r="40"/>
+	<circle class="st1" cx="223.9" cy="740.6" r="8.7"/>
+</g>
+</svg>
