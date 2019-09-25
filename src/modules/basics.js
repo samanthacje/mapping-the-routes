@@ -26,14 +26,16 @@ const Basics = function(){}
 
     Basics.dropdown = ()=>{
 
-      $('#dropbtn').addEventListener('click', function() {
-   var status = $(this).classList.contains('show')
-   if (status) {
-      $('.nav-right #dropdownctn').remove('show')
-   } else {
-      $('.nav-right #dropdownctn').add('show')
-   }
-})
+      //add listener for click
+      $("#dropbtn").addEventListener('click', handler)
+      //add listener for touch
+      $("#dropbtn").addEventListener('touchend', handler)
+
+      const handler = event => {
+        $("#dropdownctn").classList.toggle("show")
+      }
+
+
       }
 
   export default Basics
