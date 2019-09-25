@@ -84,7 +84,7 @@
 	.country-list li a
 	{
 		color: gray;
-		font-size: 0.8vw;
+		text-decoration: none;
 	}
 
 	.country-list .active
@@ -92,7 +92,7 @@
 		color: #ffffff;
 	}
 
-	.dd-menu
+	#dd-menu
 	{
 		width: 20vw;
 		top: 40px;
@@ -100,17 +100,17 @@
 		padding: 5vh 3vw;
 	}
 
-.dd-menu li
+#dd-menu li
 {
 	margin: 5vh 0;
 }
 
-.dd-menu li img, .dd-menu li form
+#dd-menu li img, #dd-menu li form
 {
 	margin-top: 1vh;
 }
 
-.menu-logo li
+#dd-menu .menu-logo li
 {
 	margin: 0 1.5vw 0 0;
 }
@@ -133,7 +133,27 @@
 		margin: 0;
 	}
 
+	.img-cluster
+	{
+	position: relative;
+	width: 135%;
+	right: 15%;
+	}
 
+	.float-left
+	{
+	margin-bottom: 10px;
+	width: 60%;
+	}
+
+	.float-right
+	{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 39%
+
+	}
 
   .footer{
   	flex-direction: row;
