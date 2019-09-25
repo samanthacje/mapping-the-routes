@@ -17,8 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	Basics.lightbox()
 
-	Basics.dropdown()
-
 	var ctrls_prev = RoutesCtrl.init(isDesktopPrev)
 	var nav_prev = Navbar.init(isDesktopPrev)
 
