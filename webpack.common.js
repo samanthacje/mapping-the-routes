@@ -8,7 +8,9 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: {
+        css: __dirname + "/src/css.js",
         index: __dirname + "/src/index.js",
+        index2: __dirname + "/src/index2.js",
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

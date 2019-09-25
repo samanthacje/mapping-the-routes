@@ -1,14 +1,6 @@
-import './style/main.css'
-import './style/desktop.css'
-import './style/routes-map.css'
-import './style/progress-bar.css'
-import './style/overlay.css'
-
 import ProgressBar from './modules/progress-bar.js'
 import Navbar from './modules/navbar.js'
 import Hash from './modules/url-hash.js'
-import Subscribe from './modules/subscribe.js'
-import SeizureMap from './modules/seizure-map.js'
 import RoutesCtrl from './modules/Routes/routes-ctrl.js'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -25,10 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	Navbar.countryControllerD()
 
 	Hash.initHashController()
-
-	Subscribe.initBookmark()
-
-	SeizureMap.renderMap()
 
 	var ctrls_prev = RoutesCtrl.init(isDesktopPrev)
 
