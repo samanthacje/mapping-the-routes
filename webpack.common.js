@@ -88,6 +88,7 @@ module.exports = {
         new CopyWebpackPlugin([
             // './favicon.ico',
             './README.md',
+            './CNAME',
             {from: './src/public/assets', to: 'assets'}
             // './favicon.png',
         ], {}) // options
