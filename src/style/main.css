@@ -241,7 +241,7 @@ p
   color: #9c5e18;
 }
 
-#dd-menu
+#dropdownctn
 {
   position: absolute;
   height: 100vh;
@@ -261,20 +261,20 @@ p
   line-height: 1.25;
 }
 
-#dd-menu li
+#dropdownctn li
 {
 padding: 0;
 list-style: none;
 margin: 0 0 7vh 0;
 }
 
-#dd-menu li img, #dd-menu li form
+#dropdownctn li img, #dropdownctn li form
 {
 margin-top: 2vh;
 display: block;
 }
 
-#dd-menu input[type="email"]{
+#dropdownctn input[type="email"]{
 display: inherit;
 background-color: #eaeaea;
 border: none;
@@ -288,7 +288,7 @@ margin-bottom: 1vh;
 box-sizing: border-box;
 }
 
-#dd-menu button{
+#dropdownctn button{
 
 color: #dcba7d;
 font-weight: bold;
@@ -303,18 +303,18 @@ width: 100%;
 padding: 1.8vh 0;
 }
 
-#dd-menu #submit-message{
+#dropdownctn #submit-message{
 display: inherit;
 font-size: 10px;
 color: red;
 }
 
-#dd-menu .menu-logo
+#dropdownctn .menu-logo
 {
 padding: 0;
 }
 
-#dd-menu .menu-logo li
+#dropdownctn .menu-logo li
 {
 display: inline-block;
 margin: 0 3vw 0 0;
