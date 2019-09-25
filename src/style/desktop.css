@@ -92,7 +92,7 @@
 		color: #ffffff;
 	}
 
-	#dd-menu
+	#dropdownctn
 	{
 		width: 20vw;
 		top: 40px;
@@ -100,17 +100,17 @@
 		padding: 5vh 3vw;
 	}
 
-#dd-menu li
+#dropdownctn li
 {
 	margin: 5vh 0;
 }
 
-#dd-menu li img, #dd-menu li form
+#dropdownctn li img, #dropdownctn li form
 {
 	margin-top: 1vh;
 }
 
-#dd-menu .menu-logo li
+#dropdownctn .menu-logo li
 {
 	margin: 0 1.5vw 0 0;
 }
@@ -151,7 +151,7 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 39%
+	width: 38.5%
 
 	}
 

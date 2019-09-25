@@ -26,8 +26,9 @@
 .modal-content {
   margin: auto;
   display: block;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 90vw;
+  max-height: 80vh;
+  min-height: 80vh;
 }
 
 /* Add Animation - Zoom in the Modal */
