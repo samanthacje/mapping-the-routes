@@ -3,7 +3,9 @@ import './style/desktop.css'
 import './style/routes-map.css'
 import './style/progress-bar.css'
 import './style/overlay.css'
+import './style/lightbox.css'
 
+import Basics from './modules/basics.js'
 import ProgressBar from './modules/progress-bar.js'
 import Navbar from './modules/navbar.js'
 import Hash from './modules/url-hash.js'
@@ -20,17 +22,16 @@ window.addEventListener('DOMContentLoaded', () => {
 	var progressCtrl = ProgressBar.initScrollController()
 	ProgressBar.initClickNav()
 
-	Navbar.titleChangeD()
-
-	Navbar.countryControllerD()
-
 	Hash.initHashController()
 
 	Subscribe.initBookmark()
 
 	SeizureMap.renderMap()
 
+	Basics.lightbox()
+
 	var ctrls_prev = RoutesCtrl.init(isDesktopPrev)
+	var nav_prev = Navbar.init(isDesktopPrev)
 
 	//window resize:
 	window.onresize = function(){
@@ -43,6 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	    //switch routes ctrl
 	    ctrls_prev.forEach(ctrl=>{ ctrl.destroy(true) }) //destroy ctrls, reset scenes
+			nav_prev.forEach(ctrl=>{ nav.destroy(true) }) //destroy ctrls, reset scenes
 			RoutesCtrl.init(isDesktop)
 	  }
 	  //reset audio ctrl

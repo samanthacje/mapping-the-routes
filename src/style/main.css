@@ -83,14 +83,14 @@ p
 	color: #dcba7d;
 }
 
-a {
+.container a {
 	color: black;
 	text-decoration: underline;
 	text-decoration-color: #dcba7d;
 	transition: all .3s ease-in-out;
 }
 
-a:hover {
+.container a:hover {
 	color: white;
 	background: #dcba7d;
 }
@@ -230,12 +230,18 @@ a:hover {
   box-sizing: border-box;
 }
 
+.country-list li a
+{
+  color: #3b3b3b;
+  text-decoration: none;
+}
+
 .country-list .active
 {
   color: #9c5e18;
 }
 
-.dd-menu
+#dd-menu
 {
   position: absolute;
   height: 100vh;
@@ -243,6 +249,7 @@ a:hover {
   top: 30px;
   right: 0;
   box-sizing: border-box;
+  display: none;
 
   background-color: #dcba7d;
   margin: 0 -11px 0 0;
@@ -254,20 +261,20 @@ a:hover {
   line-height: 1.25;
 }
 
-.dd-menu li
+#dd-menu li
 {
 padding: 0;
 list-style: none;
 margin: 0 0 7vh 0;
 }
 
-.dd-menu li img, .dd-menu li form
+#dd-menu li img, #dd-menu li form
 {
 margin-top: 2vh;
 display: block;
 }
 
-.dd-menu input[type="email"]{
+#dd-menu input[type="email"]{
 display: inherit;
 background-color: #eaeaea;
 border: none;
@@ -281,7 +288,7 @@ margin-bottom: 1vh;
 box-sizing: border-box;
 }
 
-.dd-menu button{
+#dd-menu button{
 
 color: #dcba7d;
 font-weight: bold;
@@ -296,18 +303,18 @@ width: 100%;
 padding: 1.8vh 0;
 }
 
-.dd-menu #submit-message{
+#dd-menu #submit-message{
 display: inherit;
 font-size: 10px;
 color: red;
 }
 
-.menu-logo
+#dd-menu .menu-logo
 {
 padding: 0;
 }
 
-.menu-logo li
+#dd-menu .menu-logo li
 {
 display: inline-block;
 margin: 0 3vw 0 0;
@@ -487,6 +494,21 @@ margin: 0 3vw 0 0;
   color: #5e5e5e;
 }
 
+.img-cluster
+{
+  display: block;
+}
+
+.float-left
+{
+  width: 100%;
+}
+
+.float-right
+{
+  width: 100%;
+}
+
 /*component*/
 
 #geo-map-container{
@@ -580,4 +602,58 @@ div.d3-tooltip span{
 
 .timeline .axis .tick:hover text{
 	fill: #dcba7d;
+}
+
+.credits
+{
+  margin-top: 10vh;
+  text-align: center;
+  border-top: #dcba7d solid 1px;
+  padding-top: 5vh;
+}
+
+.credits h2
+{
+  font-family: Open Sans bold;
+
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.37;
+letter-spacing: normal;
+text-align: center;
+color: #dcba7d;
+text-transform: uppercase;
+}
+
+.credits h3
+{
+  font-family: Open Sans bold;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.credits li
+{
+  font-size: 13px;
+}
+
+.credits li
+{
+    list-style: none;
+}
+
+.credits ul
+{
+    padding: 0;
+    margin-bottom: 3.5vh;
+    margin-top: 5px;
+}
+
+.show
+{
+  display: block;
 }
